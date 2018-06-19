@@ -1,0 +1,274 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"req",
+				"request"
+			],
+			[
+				"cust",
+				"customer"
+			],
+			[
+				"cus",
+				"customer"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"requs",
+				"request"
+			],
+			[
+				"requ",
+				"request"
+			],
+			[
+				"met",
+				"method\tAttr"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Advanced ",
+				"Package Control: Advanced Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"About"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/chosen/Code/chosen/app/Http/Requests/LoanProductRequest.php",
+		"/home/chosen/Code/chosen/app/Http/Controllers/LoanProductsController.php",
+		"/home/chosen/Code/chosen/.env",
+		"/home/chosen/Code/chosen/resources/views/customers/customereditform.blade.php",
+		"/home/chosen/Code/chosen/database/migrations/2018_05_25_114720_create_customers_table.php",
+		"/home/chosen/Code/chosen/resources/views/customers/customerslist.blade.php",
+		"/home/chosen/Code/chosen/app/Http/Controllers/CustomersController.php",
+		"/home/chosen/Code/chosen/database/migrations/2018_06_05_115020_create_loan_application_table.php",
+		"/home/chosen/Code/chosen/app/LoanProducts.php",
+		"/home/chosen/Code/chosen/app/Http/Controllers/LoanApplicationController.php",
+		"/home/chosen/Code/chosen/app/LoanApplication.php",
+		"/home/chosen/Code/chosen/database/migrations/2018_06_05_082255_create_loan_products_table.php",
+		"/home/chosen/Code/chosen/resources/views/customers/customershow.blade.php",
+		"/home/chosen/Code/chosen/app/Customer.php",
+		"/home/chosen/Code/chosen/resources/views/loans/loanapplicationslist.blade.php",
+		"/home/chosen/Code/chosen/resources/views/loans/loanapplication.blade.php",
+		"/home/chosen/Code/chosen/resources/views/loanproducts/loanproductslist.blade.php",
+		"/home/chosen/Code/chosen/routes/web.php",
+		"/home/chosen/Code/chosen/resources/views/layouts/reports.blade.php",
+		"/home/chosen/Code/chosen/resources/views/layouts/nav.blade.php",
+		"/home/chosen/Code/chosen/resources/views/layouts/master2.blade.php",
+		"/home/chosen/Code/chosen/public/js/bootstrap.min.js",
+		"/home/chosen/Code/chosen/resources/views/layouts/navbar.blade.php",
+		"/home/chosen/Code/chosen/resources/views/customers/layout.blade.php",
+		"/home/chosen/Code/chosen/public/css/navbar-fixed-top.css",
+		"/home/chosen/Code/chosen/resources/views/layouts/master.blade.php",
+		"/home/chosen/Code/chosen/resources/views/loanproducts/loanproductsform.blade.php",
+		"/home/chosen/Code/chosen/resources/views/layouts/app.blade.php",
+		"/home/chosen/Code/chosen/config/app.php",
+		"/home/chosen/Code/chosen/resources/views/layouts/footer.blade.php",
+		"/home/chosen/Code/chosen/resources/views/layouts/sidebar.blade.php",
+		"/home/chosen/Code/chosen/resources/views/layouts/errors.blade.php",
+		"/home/chosen/Code/chosen/app/customer.php",
+		"/home/chosen/Code/chosen/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php",
+		"/home/chosen/Code/chosen/resources/views/welcome.blade.php",
+		"/home/chosen/Code/chosen/public/css/blog.css",
+		"/home/chosen/Code/chosen/resources/views/customerformie.ss",
+		"/home/chosen/Code/mobis4/app/helpers.php"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Controller.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Cust",
+				"app/Customer.php"
+			],
+			[
+				"custo",
+				"resources/views/customers/customerform.blade.php"
+			],
+			[
+				"",
+				".env"
+			],
+			[
+				"Blue",
+				"vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php"
+			],
+			[
+				"v/wel",
+				"resources/views/welcome.blade.php"
+			],
+			[
+				"rweb",
+				"routes/web.php"
+			],
+			[
+				"helper",
+				"app/helpers.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 251.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
