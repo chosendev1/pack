@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('customers', 'CustomersController');
+Route::resource('loan-products', 'LoanProductsController');
+Route::resource('loan-applications', 'LoanApplicationsController');
+Route::resource('guarantors', 'GuarantorsController');

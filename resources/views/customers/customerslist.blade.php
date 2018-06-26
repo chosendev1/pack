@@ -1,8 +1,8 @@
 
-    @extends('layouts.reports')
+    @extends('layouts.master')
       
         @section ('content')
-        <div class="container">
+        <div class="row">
 
           <div class="blog-post">
             <h2 class="blog-post-title">List Of All Customers </h2>

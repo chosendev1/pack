@@ -15,6 +15,13 @@ class CreateLoanProductsTable extends Migration
     {
         Schema::create('loan_products', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('product_name');
+            $table->string('interest_method');
+            $table->decimal('interest_rate', 3, 2);
+            $table->decimal('penalty_rate', 3, 2);
+
+            $table->softDeletes();
+            
             $table->timestamps();
         });
     }
