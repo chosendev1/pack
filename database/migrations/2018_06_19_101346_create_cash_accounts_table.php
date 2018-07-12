@@ -15,6 +15,7 @@ class CreateCashAccountsTable extends Migration
     {
         Schema::create('cash_accounts', function (Blueprint $table) {
             $table->increments('id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

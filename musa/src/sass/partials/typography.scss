@@ -1,0 +1,359 @@
+/*------------------------------------------------------------------
+[Typography]
+*/
+
+/*
+1. Standard elements
+2. Headings
+3. Lins and Others
+4. Font Sizes
+5. Font Weights
+6. Misc
+7. Other Colors
+8. Text Colors
+9. Line-heights
+10. Responsive Handlers : Typo
+
+-------------------------------------------------------------------*/
+
+/* Standard elements
+--------------------------------------------------
+*/
+
+html {
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+/* Headings
+------------------------------------
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 44px;
+  line-height: 55px;
+  letter-spacing: -0.08px;
+}
+
+h2 {
+  font-size: 31px;
+  line-height: 40px;
+}
+
+h3 {
+  font-size: 27px;
+  line-height: 35px;
+}
+
+h4 {
+  font-size: 22px;
+  line-height: 31.88px;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 25.88px;
+}
+
+/* Lins and Others
+------------------------------------
+*/
+
+a {
+  text-shadow: none !important;
+  transition: color 0.1s linear 0s, background-color 0.1s linear 0s, opacity 0.2s linear 0s !important;
+  outline: 0 !important;
+  text-decoration: none;
+  color: $link-color;
+  &:focus, &:hover, &:active {
+    outline: 0 !important;
+    text-decoration: none;
+    color: darken($link-color, 5%);
+  }
+  cursor: pointer;
+}
+br {
+  line-height: normal;
+  clear: both;
+}
+
+code {
+  color: $code-color;
+  &:not(.file-structure){
+    background-color: $light-blue;
+    &:hover {
+      background-color: fade-out($code-color,.9);
+    }
+  }
+}
+
+p {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 0.01em;
+  line-height: 22px;
+  margin: 0 0 10px 0;
+  font-style: normal;
+  white-space: normal;
+}
+
+small, .small {
+  line-height: 18px;
+  font-size: 81%;
+}
+
+label{
+  &.inline {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    font-size: 13px;
+  }
+}
+
+ul > li, ol > li {
+  line-height: 24px;
+}
+
+
+
+address {
+  margin-bottom: 0;
+  a {
+    color:$grey-dark;
+    &:hover{
+      color:fade-out($grey-dark,.1);
+    }
+  }
+}
+
+blockquote {
+  padding: 0 0 0 18px;
+  border-left: 0;
+  &:before {
+    font-family: FontAwesome;
+    content: "\f10d";
+    margin-right: 13px;
+    float: left;
+  }
+  p {
+    font-size: 16px;
+  }
+  small {
+    line-height: 29px;
+    color: $grey;
+    padding-left: 30px;
+    &:before {
+      content: "";
+    }
+  }
+  &.float-right {
+    border-right: 0;
+    &:before {
+      float: right;
+      font-family: FontAwesome;
+      content: "\f10d";
+      margin-left: 13px;
+      margin-right: 0;
+    }
+    small {
+      padding-right: 30px;
+      &:after {
+        content: "";
+      }
+    }
+  }
+}
+
+hr {
+  border-color: $lighter-grey;
+  &.double {
+    border-width: 2px;
+  }
+  &.dotted {
+    border-style: dotted none none;
+  }
+}
+
+/* Font Sizes
+------------------------------------
+*/
+.fs-10 {
+  font-size: 10px !important;
+}
+
+.fs-11 {
+  font-size: 11px !important;
+}
+
+.fs-12 {
+  font-size: 12px !important;
+}
+
+.fs-13 {
+  font-size: 13px !important;
+}
+
+.fs-14 {
+  font-size: 14px !important;
+}
+
+.fs-15 {
+  font-size: 15px !important;
+}
+
+.fs-16 {
+  font-size: 16px !important;
+}
+
+.small-text {
+  font-size: 12px !important;
+}
+
+.normal-text {
+  font-size: 13px !important;
+}
+
+.large-text {
+  font-size: 15px !important;
+}
+
+/* Font Weights
+------------------------------------
+ */
+
+.normal {
+  font-weight: normal;
+}
+
+.semi-bold {
+  font-weight: 400 !important;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.light {
+  font-weight: 300 !important;
+}
+
+/* Misc
+------------------------------------
+*/
+
+.muted {
+  color: $lighter-grey;
+}
+
+.hint-text {
+  opacity: .7;
+}
+
+.no-decoration {
+  text-decoration: none !important;
+}
+
+
+/* Text Colors */
+
+.text-black {
+  color: black!important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+/* Line-heights
+------------------------------------
+*/
+
+.lh-normal {
+  line-height: normal;
+}
+
+.lh-10 {
+  line-height: 10px;
+}
+
+.lh-11 {
+  line-height: 11px;
+}
+
+.lh-12 {
+  line-height: 12px;
+}
+
+.lh-13 {
+  line-height: 13px;
+}
+
+.lh-14 {
+  line-height: 14px;
+}
+
+.lh-15 {
+  line-height: 15px;
+}
+
+.lh-16 {
+  line-height: 16px;
+}
+
+/* Responsive Handlers : Typo
+------------------------------------
+*/
+@media (max-width: 1400px) {
+  body, p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  h1 {
+    font-size: 33px;
+    line-height: 44px;
+    letter-spacing: -0.08px;
+  }
+  h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 35.88px;
+  }
+  h4 {
+    font-size: 18px;
+    line-height: 33.88px;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 25.88px;
+  }
+  small, .small {
+    font-size: 89%;
+    line-height: 17px;
+  }
+}
+
+
+@media screen and (max-width: 767px){
+  .address-block{
+    .card-body{
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}

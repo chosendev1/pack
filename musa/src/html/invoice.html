@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Musa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+    <link href="css/vendor.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/color-settings.css" rel="stylesheet" type="text/css" media="all" data-role="color-settings"/>
+    <link href="css/invoice.css" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body class="nav-md theme-green">
+    <div class="main-container">
+
+        <!-- sidebar -->
+        //= partials/sidebar.html
+        <!-- /sidebar -->
+
+        <div class="content-wrapper">
+
+            <!-- header content  -->
+            //= partials/header.html
+            <!-- /header content -->
+
+            <!-- theme settings-->
+            //= settings/theme-settings.html
+            <!-- /theme settings -->
+
+            <!-- page content -->
+            <div class="main-content">
+                <!-- START PAGE COVER -->
+                <div class="row bg-title clearfix page-title">
+                    <div class="col-12 col-lg-3">
+                        <h4 class="page-title">Getting started!</h4>
+                    </div>
+                    <div class="col-12 col-lg-9">
+                        <!-- START breadcrumb -->
+                        <ol class="breadcrumb pl-0 pr-0 float-lg-right">
+                            <li><a href="index.html">Musa</a></li>
+                            <li><a href="javascript:void(0)">Extras</a></li>
+                            <li class="active">Invoice</li>
+                        </ol>
+                        <!-- END breadcrumb -->
+                    </div>
+                    <div class="col-12">
+                        <h3>Invoice</h3>
+                    </div>
+                </div>
+                <!-- END PAGE COVER -->
+                <div class="container-fluid">
+                    <div class="card card-default m-t-20">
+                        <div class="card-header border-0 btn-print-wrapper">
+                            <button type="button" id="btnPrint" class="btn bg-transparent btn-circle float-right" title="Print"><i class="fa fa-print"></i></button>
+                        </div>
+                        <div class="card-block">
+                            <div id="invoice-wrapper">
+                                <div class="invoice padding-50" id="invoice">
+                                    <div class="invoice-top-row">
+                                        <div class="float-sm-left">
+                                            <span class="icon-admin-logo text-theme invoice-logo"></span>
+                                            <address class="m-t-10">
+                                                Bee Web Systems LLC
+                                                <br>
+                                                (+374) 94 34 34 52
+                                                <br>
+                                            </address>
+                                        </div>
+                                        <div class="float-sm-right">
+                                            <h2 class="text-uppercase hint-text">Invoice</h2>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-9">
+                                            <p class="small m-0">Invoice to</p>
+                                            <h5 class="semi-bold m-t-0">Richard Harvey</h5>
+                                            <address>
+                                                <strong>Company, Inc.</strong>
+                                                <br>
+                                                44 Shirley Ave. West Chicago<br>
+                                                IL 60185, United States
+                                            </address>
+                                        </div>
+                                        <div class="col-lg-3 d-flex align-items-end justify-content-between">
+                                            <div>
+                                                <div class="bold text-uppercase">Invoice No :</div>
+                                                <div class="bold text-uppercase">Invoice date :</div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="text-right">
+                                                <div class="">0047</div>
+                                                <div class="">29/09/14</div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive m-t-20">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th class="">Task Description</th>
+                                                <th class="text-center">Rate</th>
+                                                <th class="text-center">Hours</th>
+                                                <th class="text-right">Total</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p class="text-black">Service name 1</p>
+                                                    <p class="small hint-text">
+                                                        Description 1
+                                                    </p>
+                                                </td>
+                                                <td class="text-center">$65.00</td>
+                                                <td class="text-center">84</td>
+                                                <td class="text-right">$5,376.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="text-black">Service name 2</p>
+                                                    <p class="small hint-text">
+                                                        Description 2
+                                                    </p>
+                                                </td>
+                                                <td class="text-center">$89.00</td>
+                                                <td class="text-center">100</td>
+                                                <td class="text-right">$8,900.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="text-black">Service name 3</p>
+                                                    <p class="small hint-text">
+                                                        Description 3
+                                                    </p>
+                                                </td>
+                                                <td class="text-center">$100.00</td>
+                                                <td class="text-center">500</td>
+                                                <td class="text-right">$50,000.00</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="p-l-15 p-r-15">
+                                        <div class="row b-a border-grey pt-3 pt-lg-0 total-box">
+                                            <div class="col-12 col-lg-3 col-xl-3 p-l-15 clearfix d-flex flex-column justify-content-center">
+                                                <h5 class="text-uppercase small m-0 hint-text bold">Advance</h5>
+                                                <h4 class="m-0">$30,000.00</h4>
+                                            </div>
+                                            <div class="col-12 col-lg-4 col-xl-4 clearfix d-flex flex-column justify-content-center">
+                                                <h5 class="text-uppercase small m-0 hint-text bold">Discount (10%)</h5>
+                                                <h4 class="m-0">$525.00</h4>
+                                            </div>
+                                            <div class="col-12 col-lg-5 col-xl-5 padding-15 d-flex flex-column justify-content-center align-items-lg-end">
+                                                <h5 class="text-uppercase small m-0 hint-text bold">Total</h5>
+                                                <h2 class="m-0">$52476.00</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <hr>
+                                    <p class="small hint-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    <p class="small hint-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-12 d-flex align-items-center flex-column flex-sm-row invoice-buttom-row">
+                                            <span class="icon-admin-logo text-theme invoice-logo"></span>
+                                            <span class="ml-sm-4 mt-2 mt-sm-0 text-black">+34 346 4546 445</span>
+                                            <span class="ml-sm-4 mt-2 mt-sm-0 text-black">support@musa.io</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /page content -->
+
+            <!-- footer content -->
+            //= partials/footer.html
+            <!-- /footer content -->
+
+        </div>
+    </div>
+<!-- site foot -->
+//= partials/site-foot.html
+<!-- /site foot -->

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Musa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+    <link href="./css/vendor.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="./css/main.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="./css/color-settings.css" rel="stylesheet" type="text/css" media="all" data-role="color-settings"/>
+    <link href="./css/login-register.css" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body class="nav-md theme-green">
+
+<!-- page content  -->
+<div class="main-container login-register">
+    <div class="d-flex justify-content-center h-100 w-100 align-items-center">
+        <div class="login-container">
+            <div class="form-container">
+                <div class="text-center logo-container">
+                    <a href="index.html"><span class="icon-admin-logo text-theme logo"></span></a>
+                </div>
+                <h4 class="text-center">Log in to your accaunt</h4>
+                <form class="material-form">
+                    <div class="form-group floating-label">
+                        <input type="text" class="form-control" id="username3">
+                        <label for="username3">Username</label>
+                    </div>
+                    <div class="form-group floating-label">
+                        <input type="password" class="form-control" id="password">
+                        <label for="password">Password</label>
+                        <small class="help-block"><a href="recover-password.html">Forgotten?</a></small>
+                    </div>
+                    <div class="form-check">
+                        <div class="custom-control custom-checkbox material-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="rememberMe">
+                            <label class="custom-control-label" for="rememberMe">Remember me</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-theme ripple btn-raised btn-block btn-submit">
+                            <span>Log in</span>
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <div class="text-center form-bottom">
+                            <p>Don't have an account? <a href="register.html" class="text-theme m-l-5"><b>Sign Up</b></a></p>
+                            <p class="text-center text-uppercase bold">or</p>
+                            <div>
+                                <p class="mr-2 d-inline-block">Sign in with</p>
+                                <button type="button" class="btn btn-facebook btn-circle bg-transparent" title="Facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-twitter btn-circle bg-transparent" title="Twitter"> <i class="fa fa-twitter" aria-hidden="true"></i> </button>
+                                <button type="button" class="btn btn-googleplus btn-circle bg-transparent" title="Google Plus"> <i class="fa fa-google-plus" aria-hidden="true"></i> </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /page content -->
+
+<!-- site foot -->
+//= partials/site-foot.html
+<!-- /site foot -->

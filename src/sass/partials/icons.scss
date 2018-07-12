@@ -1,0 +1,66 @@
+/*------------------------------------------------------------------
+[ Icons]
+*/
+
+@import url(//fonts.googleapis.com/icon?family=Material+Icons);
+
+.icon-list-demo{
+  .row {
+    > div {
+      cursor: pointer;
+      line-height: 55px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      color: $blue-grey;
+      &:hover{
+        background-color: $light-blue;
+        color: darken($blue-grey, 20%);
+        i{
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  i{
+    @include transition(all 0.2s ease);
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 15px 0 10px;
+    text-align: left;
+    vertical-align: middle;
+    width: auto;
+  }
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+

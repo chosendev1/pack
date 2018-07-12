@@ -1,0 +1,362 @@
+/*------------------------------------------------------------------
+[Settings]
+*/
+#customized-css{
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+  height: 530px;
+}
+.settings-wrapper {
+  position: fixed;
+  right: -360px;
+  top: 0;
+  width: 360px;
+  background: #fff;
+  bottom: 0;
+  z-index: 998;
+  @include box-shadow(0 0 9px rgba(0,0,0,.08));
+  border-left: 1px solid rgba(222, 227, 231, 0.56);
+  @include transition(transform 400ms cubic-bezier(0.05, 0.74, 0.27, 0.99));
+  .jscolor{
+    width: 80px;
+    min-height: 11px;
+    height: 26px;
+    border: 0;
+    padding: 3px 12px;
+    margin-bottom: 5px;
+    @include box-shadow(0 0 3px 2px #ececec);
+    &:focus{
+      @include box-shadow(0 0 3px 3px #ececec);
+    }
+    &::-webkit-input-placeholder {
+      color: black;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: black;
+    }
+    &::-moz-placeholder {  /* Firefox 19+ */
+      color: black;
+    }
+    &:-ms-input-placeholder {
+      color: black;
+    }
+  }
+  &.open {
+    @include transform(translate3d(-100%, 0, 0));
+  }
+  label{
+    line-height: 12px;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  .settings-toggle {
+    position: absolute;
+    right: 12px;
+    top: 2px;
+    color: $grey-dark;
+    padding: 6px;
+    opacity: 0.4;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  > li{
+    > a{
+      padding: 11px;
+      color: $grey-dark;
+      opacity: 0.6;
+      border: 0;
+      text-align: center;
+      font-size: 11px;
+      font-weight: bold;
+      min-width: 62px;
+      &:hover {
+        color: $grey-dark;
+        opacity: 1;
+      }
+    }
+    &.active{
+      > a, > a:hover, > a:focus{
+        background-color: transparent;
+        border: 0;
+        color: $lighter-grey;
+        opacity: 1;
+      }
+    }
+  }
+  .color-settings-row{
+    border-bottom: 1px solid $whitesmoke;
+    padding-bottom: 7px;
+    .btn-prev{
+      width: 95px;
+      margin-right: 15px;
+      &#btn-primary-prev{
+        background-color: $primary;
+        color: white;
+      }
+      &#btn-secondary-prev{
+        background-color: $secondary;
+        color: white;
+      }
+      &#btn-success-prev{
+        background-color: $success;
+        color: white;
+      }
+      &#btn-danger-prev{
+        background-color: $danger;
+        color: white;
+      }
+      &#btn-warning-prev{
+        background-color: $warning;
+        color: white;
+      }
+      &#btn-info-prev{
+        background-color: $info;
+        color: white;
+      }
+      &#btn-light-prev{
+        background-color: $light;
+        color: $dark;
+      }
+      &#btn-dark-prev{
+        background-color: $dark;
+        color: white;
+      }
+    }
+  }
+  &.builder {
+    > div {
+      height: calc(100% - 12px);
+    }
+    a {
+      position: relative;
+      display: block;
+      width: 100%;
+      color: rgb(255, 255, 255);
+      > img {
+        @include transition(opacity 0.1s linear);
+      }
+      &.active {
+        > img {
+          opacity: 0.87;
+        }
+        &:before {
+          width: 23px;
+          height: 23px;
+          content: '';
+          position: absolute;
+          top: 84px;
+          right: -10px;
+          z-index: 10;
+        }
+      }
+      &:hover {
+        > img {
+          opacity: 0.7;
+        }
+      }
+    }
+    .builder-footer {
+      right: 0;
+      left: 0;
+      z-index: 10;
+    }
+    .theme-selector.active:before {
+      top: 54px;
+      right: 10px;
+    }
+    .nav-tabs {
+      background-color: transparent;
+      padding: 0;
+      > li {
+        > a {
+          min-width: 99px;
+          padding: 16px 0;
+        }
+      }
+      ~ .tab-content {
+        position: relative;
+        padding-right: 0;
+        height: 100%;
+        top: 0;
+        .tab-pane {
+          height: 100%;
+        }
+      }
+    }
+    .builder-close {
+      position: absolute;
+      right: 16px;
+      top: 7px;
+      padding: 7px;
+      width: auto;
+      z-index: 10;
+      font-size: 13px;
+      color: $grey-dark;
+    }
+    .builder-toggle {
+      position: absolute;
+      width: 46px;
+      height: 35px;
+      top: 150px;
+      left: -43px;
+      text-align: center;
+      line-height: 36px;
+      cursor: pointer;
+      font-size: 15px;
+      &:hover{
+        color: rgb(255,255,255);
+      }
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      width: 40px;
+      height: 35px;
+      top: 150px;
+      left: -40px;
+      @include box-shadow(0 0 9px rgba(191, 191, 191, 0.36));
+      border-left: 1px solid rgba(222, 227, 231, 0.56);
+      border-bottom-left-radius: 2px;
+      border-top-left-radius: 2px;
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      background-color: #fff;
+      width: 5px;
+      height: 35px;
+      left: 0;
+      top: 150px;
+    }
+  }
+  .scroll-wrapper {
+    position: relative;
+    height: calc(100% - 122px);
+    .scroll-content{
+      overflow-x: hidden !important;
+      height: 100%;
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+  }
+  #layouts{
+    .scroll-content{
+      padding: 10px;
+      .card{
+        position: relative;
+        margin-bottom: 17px;
+      }
+      .jscolor{
+        width: 102px;
+        background-image: url(../img/colorpicker.svg)!important;
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        background-size: 13px;
+        padding-left: 27px;
+        &:focus{
+          background-image: none!important;
+      }
+      }
+    }
+  }
+  .fixed-bottom-buttons{
+    position: absolute;
+    bottom: 30px;
+    width: 304px;
+    text-align: center;
+    button{
+      width: 92px;
+      i{
+        font-size: 13px;
+      }
+    }
+  }
+  &.builder {
+    .card{
+      .card-title{
+        font-size: 16px;
+      }
+      .card-body{
+        width: 100%;
+        margin: 0 auto;
+          .layout-view{
+            width: 245px;
+            height: 110px;
+            border: 1px solid $whitesmoke;
+            @include border-radius(4px);
+            overflow: hidden;
+            cursor: pointer;
+            &.layout-view-left-sidebar{
+              background: url("../img/site-demo-left-sidebar.jpg");
+              background-size: cover;
+            }
+            &.layout-view-right-sidebar{
+              background: url("../img/site-demo-right-sidebar.jpg");
+              background-size: cover;
+            }
+            &.layout-view-fixed-header{
+              background: url("../img/site-demo-fixed-header.jpg");
+              background-size: cover;
+            }
+            &.layout-view-rtl-content{
+              background: url("../img/site-demo-rtl-content.jpg");
+              background-size: cover;
+            }
+            .btn-activate {
+              width: 100px;
+              height: 35px;
+              z-index: 9;
+              position: relative;
+              bottom: -80px;
+              @include transition(all 300ms ease);
+              &:before {
+                font-family: FontAwesome;
+                content: "\f00c";
+                margin-right: 5px;
+              }
+              &:after{
+                content: "Activate";
+              }
+            }
+            &:hover{
+              &:after{
+                background-color: rgba(0,0,0,.3);
+              }
+              .btn-activate{
+                bottom: 0;
+              }
+            }
+            &:after{
+              content: "";
+              position: absolute;
+              bottom:0;
+              left: 0;
+              width: 245px;
+              height: 110px;
+              @include border-radius(4px);
+              @include transition(color 300ms ease);
+            }
+
+            &.active{
+              @include box-shadow(0 2px 18px 5px $lighter-grey);
+              &:not(.layout-view-fixed-header){
+                pointer-events: none;
+              }
+              &.layout-view-fixed-header{
+                .btn-activate{
+                  &:before {
+                    content: "\f05e";
+                  }
+                  &:after{
+                    content: "Cancel";
+                  }
+                }
+              }
+            }
+          }
+      }
+    }
+  }
+}

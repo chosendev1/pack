@@ -1,48 +1,62 @@
+<!-- site head -->
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lumino - Dashboard</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/datepicker3.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    
-    <!--Custom Font-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Musa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+    <link href="/css/vendor.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/main.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/color-settings.css" rel="stylesheet" type="text/css" media="all" data-role="color-settings"/>
 </head>
-<body>
+<body class="nav-md theme-green">
+<!-- /site head -->
     
-    @include('layouts.navbar')
-    @include('layouts.sidebar')
-        
+    <div class="main-container">
 
-    <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
-        @include('layouts.breadcrumb_header')
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="panel panel-default">
-                    
-        
-        @yield('content')
-                </div>
+        <!-- sidebar -->
+        @include('layouts.sidebar')
+        <!-- /sidebar -->
+        <div class="content-wrapper">
+            <!-- header content  -->   
+                @include('layouts.header')
+            <!-- /header content -->
+
+            <!-- theme settings-->
+                @include('layouts.theme-settings')         
+            <!-- /theme settings -->
+            
+            <!-- page content -->
+            <div class="main-content small-gutter">
+                <!-- START PAGE COVER -->
+                @include('layouts.breadcrumb')
+                <!-- END PAGE COVER -->
+                @yield('content')
             </div>
-        </div>
-                                
-                
-        <div class="row">
-                <div class="col-sm-12">
-                    <p class="back-link">Lumino Theme by 
-                        <a href="https://www.medialoot.com">Medialoot</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        @include('layouts.footer')
+            <!-- /page content -->
+
+            <!-- footer content -->
+            @include('layouts.footer')
+            <!-- /footer content -->
+         </div>
+    </div>
+    <!-- site foot -->
+<script src="/js/vendor.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/settings.min.js"></script>
+<script src="/js/charts.js"></script>
 </body>
 </html>
+    <!-- /site foot -->
+
+
+
+ 
+
+

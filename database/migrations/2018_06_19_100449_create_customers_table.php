@@ -23,13 +23,13 @@ class CreateCustomersTable extends Migration
             $table->string('nationality');
             $table->string('association_id_number');
             $table->string('permanent_address');
-            $table->string('mobile_no1');
-            $table->string('mobile_no2');
+            $table->string('mobile_no1')->unique();
+            $table->string('mobile_no2')->unique();
             $table->string('member_number');
             $table->string('maritual_status');
             $table->string('date_of_birth');
             $table->string('stage_of_operation');
-            $table->string('motor_cycle_no_plate');
+            $table->string('motor_cycle_no_plate')->unique();
             $table->string('closet_land_mark');
             $table->text('other_sources_of_income');
             $table->softDeletes();

@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Musa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+    <link href="./css/vendor.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="./css/main.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="./css/color-settings.css" rel="stylesheet" type="text/css" media="all" data-role="color-settings"/>
+    <link href="./css/documentation.css" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body class="nav-md theme-green">
+
+<div class="main-container">
+
+    <!-- sidebar -->
+    //= partials/sidebar.html
+    <!-- /sidebar -->
+
+    <div class="content-wrapper">
+
+        <!-- header content  -->
+        //= partials/header.html
+        <!-- /header content -->
+
+        <!-- theme settings-->
+        //= settings/theme-settings.html
+        <!-- /theme settings -->
+
+        <!-- page content  -->
+        <div class="main-content small-gutter">
+            <!-- START PAGE COVER -->
+            <div class="row bg-title clearfix page-title">
+                <div class="col-12 col-lg-3">
+                    <h4 class="page-title">Getting started!</h4>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <!-- START breadcrumb -->
+                    <ol class="breadcrumb pl-0 pr-0 float-lg-right">
+                        <li><a href="index.html">Musa</a></li>
+                        <li class="active">Documentation</li>
+                    </ol>
+                    <!-- END breadcrumb -->
+                </div>
+                <div class="col-12">
+                   <h3>MUSA Documentation</h3>
+                </div>
+            </div>
+            <!-- END PAGE COVER -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-shadowless bg-white documentation">
+                            <div class="vertical-tabs">
+
+                                <ul class="nav flex-column nav-tabs nav-tabs-simple nav-tabs-left h-100 nav-tabs-success" id="tabVerticalLeft" role="tablist" aria-orientation="vertical">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="introduction-tab" data-toggle="tab" role="tab" href="#introduction" aria-controls="introduction" aria-expanded="true">Introduction</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="settings-tab" data-toggle="tab" role="tab" href="#settings" aria-controls="settings" aria-expanded="false">Settings</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="installation-tab" data-toggle="tab" role="tab" href="#installation" aria-controls="installation" aria-expanded="false">Installation</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="sass-tab" data-toggle="tab" role="tab" href="#sass" aria-controls="sass" aria-expanded="false">Sass</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="javascript-tab" data-toggle="tab" role="tab" href="#javascript" aria-controls="javascript" aria-expanded="false">Javascript</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="browserSupport-tab" data-toggle="tab" role="tab" href="#browserSupport" aria-controls="browserSupport" aria-expanded="false">Browser Support</a>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content bg-white h-100" id="tabVerticalLeftContent">
+                                    <div role="tabpanel" class="tab-pane fade active show" id="introduction" aria-labelledby="introduction-tab" aria-expanded="true">
+                                        <div class="row">
+                                            <div class="col-12 m-b-10">
+                                                <h4 class="mt-0 box-title">Introduction</h4>
+                                                <p class="text-muted m-b-20 box-content">
+                                                   <b>MUSA</b> is a fully responsive HTML admin template, which is built with Bootstrap 4 and JavaScript.
+                                                    <b>MUSA</b> admin contains many example pages with many ready to use elements which are easy to customize. You can choose from various existing layouts, as well you can customize the main colors of your template.
+                                                </p>
+                                            </div>
+                                            <div class="col-12 m-b-10">
+                                                <h5 class="mt-0">File structure</h5>
+                                                <p class="text-muted box-content">
+                                                    You can find the following directories and files.
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="mb-0 mt-0"><b>root folder</b></p>
+                                                        <div class="row">
+                                                            <div class="col-12 col-lg-12">
+                                                        <pre>
+<code class="file-structure">
+    musa/
+    ├── build/
+    ├── node_modules/
+    ├── src/
+    ├── gulpfile.js
+    ├── package.json
+    └── README.md
+  </code>
+        </pre>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <p class="mb-0 mt-0"><b><code>build</code> folder</b></p>
+                                                        <p class="text-muted m-b-20 box-content"><code>build</code> folder includes all compiled and minified files. There are not global htmls, we have separate htmls for each page ( header, footer, sidebar are separated for each page).</p>
+                                                        <div class="row">
+                                                            <div class="col-12 col-lg-12">
+                                                <pre>
+    <code class="file-structure">
+├── build/
+│  ├── css/
+│    ├── color-settings.css
+│    ├── dashboard.css
+│    ├── documentation.css
+│    ├── error.css
+│    ├── invoice.css
+│    ├── lockscreen.css
+│    ├── login-register.css
+│    ├── main.css
+│    ├── user-profile.css
+│    └── vendor.min.css
+│  ├── fonts/
+│  │   └── compiled font files
+│  ├── img/
+│  │   └── compiled image files
+│  ├── js/
+│      ├── charts.js
+│      ├── main.js
+│      ├── settings.min.js
+│      └── vendor.min.css
+│  ├── 403-error.html
+│  ├── 404-error.html
+│  ├── 500-error.html
+│  ├── basic-tables.html
+│  ├── data-tables.html
+│  ├── documentation.html
+│  ├── email-template-alert.html
+│  ├── email-template-basic.html
+│  ├── email-template-billing.html
+│  ├── form-advanced.html
+│  ├── form-general.html
+│  ├── form-layouts.html
+│  ├── form-wizard.html
+│  ├── icons-fontawesome.html
+│  ├── icons-material.html
+│  ├── index.html
+│  ├── invoice.html
+│  ├── lockscreen.html
+│  ├── login.html
+│  ├── loginV2.html
+│  ├── recover-password.html
+│  ├── register.html
+│  ├── registerV2.html
+│  ├── ui-buttons.html
+│  ├── ui-cards.html
+│  ├── ui-carousel.html
+│  ├── ui-colors.html
+│  ├── ui-images.html
+│  ├── ui-modals.html
+│  ├── ui-notifications.html
+│  ├── ui-progress-bars.html
+│  ├── ui-sliders.html
+│  ├── ui-tabs-accordions.html
+│  ├── ui-typography.html
+│  └── user-profile.html
+    </code>
+</pre>
+                                                                <p class="mb-0 mt-0"><code>build/css</code> folder contains all compiled and minified css files,
+                                                                    where <code>vendor.min.css</code> contains <code>bootstrap.min.css</code>, <code>animate.min.css</code>, <code>font-awesome.min.css</code>.</p>
+                                                                <p><code>build/js</code> folder contains all compiled and minified js files,
+                                                                    where <code>vendor.min.js</code> contains <code>bootstrap.js</code>, <code>jquery.js</code>, <code>popper.js</code>.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <p class="mb-0 mt-0"><b><code>node_modules</code> folder</b></p>
+                                                        <p>This folder includes all required packages.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="mb-0 mt-0"><b><code>src</code> folder</b></p>
+                                                        <div class="row">
+                                                            <div class="col-12 col-lg-12">
+                                                <pre>
+<code class="file-structure">
+├── src/
+│  ├── fonts/
+│  └── All Font files
+│  ├── html/
+│     ├── partials
+│          ├── footer.html
+│          ├── header.html
+│          ├── sidebar.html
+│          ├── site-foot.html
+│          └── site-head.html
+│     ├── settings
+│          ├── color-settings.html
+│          ├── scss-colors-settings.html
+│          └── theme-settings.html
+│  ├── 403-error.html
+│  ├── 404-error.html
+│  ├── 500-error.html
+│  ├── basic-tables.html
+│  ├── data-tables.html
+│  ├── documentation.html
+│  ├── email-template-alert.html
+│  ├── email-template-basic.html
+│  ├── email-template-billing.html
+│  ├── form-advanced.html
+│  ├── form-general.html
+│  ├── form-layouts.html
+│  ├── form-wizard.html
+│  ├── icons-fontawesome.html
+│  ├── icons-material.html
+│  ├── index.html
+│  ├── invoice.html
+│  ├── lockscreen.html
+│  ├── login.html
+│  ├── loginV2.html
+│  ├── recover-password.html
+│  ├── register.html
+│  ├── registerV2.html
+│  ├── ui-buttons.html
+│  ├── ui-cards.html
+│  ├── ui-carousel.html
+│  ├── ui-colors.html
+│  ├── ui-images.html
+│  ├── ui-modals.html
+│  ├── ui-notifications.html
+│  ├── ui-progress-bars.html
+│  ├── ui-sliders.html
+│  ├── ui-tabs-accordions.html
+│  ├── ui-typography.html
+│  └── user-profile.html
+│  ├── img/
+│      └── All Image files
+│  ├── js/
+│      ├── theme-settings
+│          ├── jscolor.min.js
+│          └── settings.js
+│      ├── charts.js
+│      └── main.js
+│  └── sass/
+│      ├── pages
+│          ├── dashboard.scss
+│          ├── documentation.scss
+│          ├── error.scss
+│          ├── invoice.scss
+│          ├── lockscreen.scss
+│          ├── login-register.scss
+│          └── user-profile.scss
+│      ├── partials
+│          ├── animation.scss
+│          ├── buttons.scss
+│          ├── cards.scss
+│          ├── color-settings.scss
+│          ├── colors.scss
+│          ├── dark-sidebar.scss
+│          ├── default-colors.scss
+│          ├── fixed-header.scss
+│          ├── fonts.scss
+│          ├── forms.scss
+│          ├── globals.scss
+│          ├── header-footer.scss
+│          ├── helper-classes.scss
+│          ├── icons.scss
+│          ├── images.scss
+│          ├── light-header.scss
+│          ├── mixins.scss
+│          ├── modals.scss
+│          ├── nav-md.scss
+│          ├── nav-sm.scss
+│          ├── notifications.scss
+│          ├── progress-bars.scss
+│          ├── right-sidebar.scss
+│          ├── rtl.scss
+│          ├── sidebar.scss
+│          ├── sliders.scss
+│          ├── tables.scss
+│          ├── tabs-accordions.scss
+│          ├── theme-colors.scss
+│          ├── theme-settings.scss
+│          ├── typography.scss
+│          └── variables.scss
+│      └── main.scss
+</code>
+</pre>
+                                                            </div>
+                                                        </div>
+                                                        <p><code>sass</code> and <code>js</code> folders are the source code for our CSS and JavaScript. We will refer to these folders separately. <code>fonts/</code> and <code>img/</code> folders include accordingly all fonts and images we use in the project. </p>
+                                                        <p><code>html</code> folder includes two folders: <code>partials</code> and <code>settings</code>.</p>
+                                                    </li>
+                                                </ul>
+
+
+
+                                                <ul>
+                                                    <li>
+                                                        <p><code>html/partials</code> folder includes five files: <code>footer.html</code>, <code>header.html</code>, <code>sidebar.html</code>, <code>site-foot.html</code> and <code>site-head.html</code>.
+                                                            The first three ones are global for all pages, and they are included in each page. When you make some changes in these files, it will affect on all pages.
+                                                            <code>site-foot.html</code> and <code>site-head.html</code> files are global for all pages except the pages, where different css files are loading.
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>html/settings</code> folder includes three files: <code>color-settings.html</code>, <code>scss-colors-settings.html</code> and <code>theme-settings.html</code>.
+                                                            These files are related to theme settings and they are global for all pages.
+                                                        </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><code>color-settings.html</code>
+                                                                    There is written dynamic css of the template with dynamic values. When admin customizes colors of the template, these dynamic values will be replaced with values chosen by him.
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><code>scss-colors-settings.html</code> There are dynamic variables of colors, which can be customized by the admin. </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><code>theme-settings.html</code> It is the sidebar html of settings, admin can set settings from here.</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+                                                        The other html files are root htmls, where is written contents of the pages. There is imported global htmls from three folders described above. After compilation, these imported htmls will become as a whole html file.
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                                <div class="col-12">
+                                                    <h5 class="mt-0">Credits</h5>
+                                                    <ul>
+                                                        <li><p>Bootstrap 4.0.0</p></li>
+                                                        <li><p>Jquery 3.2.1</p></li>
+                                                        <li><p>popper.js 1.12.5</p></li>
+                                                        <li><p>Fontawesome</p></li>
+                                                        <li><p>Material design icons</p></li>
+                                                        <li><p>animate.css</p></li>
+                                                    </ul>
+                                                    <p class="text-muted m-b-20 box-content">jQuery and Popper.js are only required for bootstrap components the use of JavaScript to function. In <b>MUSA</b> there are not Jquery scripts, all functionality is written with native JavaScript.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="settings" aria-labelledby="settings-tab" aria-expanded="false">
+                                        <div class="row">
+                                            <div class="col-12 m-b-10">
+                                                <div class="bg-white padding-25 white-box h-100">
+                                                    <h4 class="mt-0 box-title">Settings</h4>
+                                                    <p class="text-muted m-b-20 box-content">
+                                                        Here is the template structure:
+                                                    </p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-9 m-t-20 m-b-20">
+                                                            <img src="img/template-view.png" alt="Template View" class="img-fluid">
+                                                        </div>
+                                                    </div>
+                                                    <p class="text-muted m-b-20 box-content">
+                                                        <b>MUSA</b> admin template allows admin to customize many options of the template.
+                                                        All these settings are available from <i>Settings Sidebar</i> (the right sidebar).<br>
+                                                        Here we have two tabs: <b>Layout Settings</b> and <b>Custom Colors</b>.</p>
+                                                    <ul>
+                                                        <li><p><b>Layout Settings</b>: This tab helps you to customize the main view of the template.</p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p><i>Sidebar color:</i> We have light color sidebar by default. Admin can change this option to dark color by clicking on <b>Dark</b> button and he can see the preview.
+                                                                    <div class="row">
+                                                                        <div class="col-12 col-md-9 m-t-20 m-b-20">
+                                                                            <img src="img/sidebar-color.png" alt="Customize Sidebar Color" class="img-fluid">
+                                                                        </div>
+                                                                    </div>
+                                                                    <p>In order to have dark sidebar, put the class <code>dark-sidebar</code> in <code>body</code> tag.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p><i>Header color:</i> We have dark color header by default. Admin can change this option to light color by clicking on <b>Light</b> button and he can see the preview.</p>
+                                                                    <div class="row">
+                                                                        <div class="col-12 col-md-9 m-t-20 m-b-20">
+                                                                            <img src="img/header-color.png" alt="Customize Sidebar Color" class="img-fluid">
+                                                                        </div>
+                                                                    </div>
+                                                                    <p>In order to have light sidebar, put the class <code>light-header</code> in <code>body</code> tag.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p><i>Main color:</i> By choosing one of these six colors admin can change the main color of the template. By default the main color is <b>green</b>, he can click on color he like and see the preview.</p>
+                                                                    <div class="row">
+                                                                        <div class="col-12 col-md-9 m-t-20 m-b-20">
+                                                                            <img src="img/main-color.png" alt="Customize Main Color" class="img-fluid">
+                                                                        </div>
+                                                                    </div>
+                                                                    <p>Add one of these classes in <code>body</code> tag to get the color you like: <code>theme-green</code>, <code>theme-purple</code>, <code>theme-red</code>, <code>theme-cyan</code>, <code>theme-orange</code>, <code>theme-grey</code>. </p>
+                                                                    <p>Or choose custom color from here. To do that add <code>theme-custom</code> class in theme <code>body</code>.</p>
+                                                                    <div class="row">
+                                                                        <div class="col-12 col-lg-3 m-t-20 m-b-20">
+                                                                            <img src="img/custom-color.png" alt="Custom Color" class="img-fluid">
+                                                                        </div>
+                                                                        <div class="col-12 col-lg-9 m-t-20 m-b-20">
+                                                                            <img src="img/custom-color-picker.png" alt="Custom Color" class="img-fluid">
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <p><i>Fixed full width header:</i> This option makes the site header fixed and full width. The header stays fixed at the top of the screen, whether you are scrolling or not. In order to see the preview, click on the image or the button.</p>
+                                                                    <div class="row">
+                                                                        <div class="col-12 col-xl-4 m-t-20 m-b-20">
+                                                                            <p>Fixed Full Width Header</p>
+                                                                            <img src="img/fixed-full-width-header.png" alt="Fixed Full Width Header" class="img-fluid">
+                                                                        </div>
+                                                                        <div class="col-12 col-xl-4 m-t-20 m-b-20">
+                                                                            <p>Activate Fixed Full Width Header</p>
+                                                                            <img src="img/activate-fixed-full-width-header.png" alt="Activate Fixed Full Width Header" class="img-fluid">
+                                                                        </div>
+                                                                        <div class="col-12 col-xl-4 m-t-20 m-b-20">
+                                                                            <p>Cancel Fixed Full Width Header</p>
+                                                                            <img src="img/cancel-fixed-full-width-header.png" alt="Cancel Fixed Full Width Header" class="img-fluid">
+                                                                        </div>
+                                                                    </div>
+                                                                    <p>In order to get fixed full width header, put <code>fixed-header</code> class in the <code>body</code> tag.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p><i>Left sidebar:</i> This option is default for the template.</p>
+                                                                    <div class="row">
+                                                                        <div class="col-12 col-xl-4 m-t-20 m-b-20">
+                                                                            <p>Left Sidebar</p>
+                                                                            <img src="img/left-sidebar.png" alt="Left Sidebar" class="img-fluid">
+                                                                        </div>
+                                                                        <div class="col-12 col-xl-4 m-t-20 m-b-20">
+                                                                            <p>Activate Left Sidebar</p>
+                                                                            <img src="img/activate-left-sidebar.png" alt="Activate Left Sidebar" class="img-fluid">
+                                                                        </div>
+                                                                        <div class="col-12 col-xl-4 m-t-20 m-b-20">
+                                                                            <p>Already Activated Left Sidebar</p>
+                                                                            <img src="img/active-left-sidebar.png" alt="Already Activated Left Sidebar" class="img-fluid">
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <p><i>Right sidebar:</i> This option repositions the sidebar to the right. In order to see the preview, click on the image or the button.</p>
+                                                                    <div class="row">
+                                                                        <div class="col-12 col-xl-4 m-t-20 m-b-20">
+                                                                            <p>Right Sidebar</p>
+                                                                            <img src="img/right-sidebar.png" alt="Right Sidebar" class="img-fluid">
+                                                                        </div>
+                                                                        <div class="col-12 col-xl-4 m-t-20 m-b-20">
+                                                                            <p>Activate Right Sidebar</p>
+                                                                            <img src="img/activate-right-sidebar.png" alt="Activate Right Sidebar" class="img-fluid">
+                                                                        </div>
+                                                                        <div class="col-12 col-xl-4 m-t-20 m-b-20">
+                                                                            <p>Already Activated Right Sidebar</p>
+                                                                            <img src="img/active-right-sidebar.png" alt="Already Activated Right Sidebar" class="img-fluid">
+                                                                        </div>
+                                                                    </div>
+                                                                    <p>In order to get the right sidebar, put <code>right-sidebar</code> class in <code>body</code> tag.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p><i>Rtl content:</i> This option makes the site content direction from the right to the left. In order to see the preview, click on the image or the button.</p>
+                                                                    <div class="row">
+                                                                        <div class="col-12 col-xl-4 m-t-20 m-b-20">
+                                                                            <p>Rtl Content</p>
+                                                                            <img src="img/rtl-content.png" alt="Rtl Content" class="img-fluid">
+                                                                        </div>
+                                                                        <div class="col-12 col-xl-4 m-t-20 m-b-20">
+                                                                            <p>Activate Rtl Content</p>
+                                                                            <img src="img/activate-rtl-content.png" alt="Activate Rtl Content" class="img-fluid">
+                                                                        </div>
+                                                                        <div class="col-12 col-xl-4 m-t-20 m-b-20">
+                                                                            <p>Already Activated Rtl Content</p>
+                                                                            <img src="img/active-rtl-content.png" alt="Activate Rtl Content" class="img-fluid">
+                                                                        </div>
+                                                                    </div>
+                                                                    <p>In order to get rtl content, put <code>rtl</code> class in <code>body</code> tag.</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <p><b>Custom Colors</b>: This tab helps you to customize the main colors of the template. We have eight base colors in the template. Admin can customize it from this tab.</p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p><i>To pick colors:</i> Choose background and text colors you want from the color pickers. There are separate color pickers for background and text colors.</p>
+                                                                    <div class="row">
+                                                                        <div class="col-12 col-lg-4 m-t-20 m-b-20">
+                                                                            <img src="img/customize-custom-colors.png" alt="Customize Custom Colors" class="img-fluid">
+                                                                        </div>
+                                                                        <div class="col-12 col-lg-4 m-t-20 m-b-20 d-flex align-items-center">
+                                                                            <img src="img/customize-custom-colors-1.png" alt="Customize Custom Colors" class="img-fluid">
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <p><i>Save and Preview Settings:</i> In order to see the preview, click on <b>Preview</b> button and you can see the preview of customized colors.<br> In order to save your changes, click on <b>Save Changes</b> button.</p>
+                                                                    <div class="row">
+                                                                        <div class="col-12 m-t-20 m-b-20 d-flex align-items-center justified-content-center">
+                                                                            <img src="img/save-custom-colors.png" alt="Customize Custom Colors" class="img-fluid">
+                                                                        </div>
+                                                                    </div>
+                                                                    <p>When you click on <b>Save</b> button, it opens a popup, from where you can get the classlist and the dynamic colors' values.</p>
+                                                                    <p> In order to get your customized layout settings, you should change the classlist of site <code>body</code> with that list from the html and click on <b>Save Changes</b> button to see your changes.</p>
+                                                                    <p>In order to get your customized color settings, find and replace the code of this file <code>/src/sass/partials/default-colors.scss</code> to that code
+                                                                        and click on <b>Save Changes</b> button to see your changes.</p>
+                                                                    <div class="col-12 m-t-20 m-b-20 d-flex align-items-center justified-content-center">
+                                                                        <img src="img/save-modal.png" alt="Save Modal" class="img-fluid">
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="installation" aria-labelledby="installation-tab" aria-expanded="false">
+                                        <div class="row">
+                                            <div class="col-12 m-b-10">
+                                                <h4 class="mt-0 box-title">Installation</h4>
+                                                <p>
+                                                    Make sure you have installed <i>Node</i> and <i>npm</i> before attempting to install <i>gulp</i>. If you have not installed <i>Node</i> yet, you can download it with the following link:
+                                                    <a href="https://nodejs.org/en/download/" title="Download NodeJs"><b><u>Download NodeJs</u></b></a>.<br> Run the following commands:
+                                                </p>
+                                                <ul>
+                                                    <li><p>Install <code>gulp</code> globally by running the following command <code>npm install -g gulp</code></p></li>
+                                                    <li><p>Navigate to the root directory of your project or musa folder then run <code>npm install</code>.</p></li>
+                                                </ul>
+                                                <h5>Gulp</h5>
+                                                <p class="text-muted box-content"><a href="http://gulpjs.com/"><b>Gulp</b></a> is a tool that helps you out with several tasks when it comes to web development. It used to do front end tasks like: </p>
+                                                <ul>
+                                                    <li><p>Spinning up a web server</p></li>
+                                                    <li><p>Reloading the browser automatically whenever a file is saved</p></li>
+                                                    <li><p>Using preprocessors like Sass or LESS</p></li>
+                                                    <li><p>Optimizing assets like CSS, JavaScript, and images</p></li>
+                                                </ul>
+                                                <h5>Tasks</h5>
+                                                <ul>
+                                                    <li>
+                                                        <p><code>gulp</code></p>
+                                                        <p>
+                                                            This is the default task that builds everything
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>gulp build</code></p>
+                                                        <p>
+                                                            This automatically creates <code>build</code> folder, compiles and minifies your <code>src</code> resources.
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>gulp watch</code></p>
+                                                        <p>
+                                                            This automaically compiles <code>sass</code> files after save.
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>gulp browserSync</code></p>
+                                                        <p>
+                                                            This opens the project in your default browser and live reloads, when changes are made
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><code>gulp clean</code></p>
+                                                        <p>
+                                                            This removes compiled files and folders.
+                                                        </p>
+                                                    </li>
+
+                                                </ul>
+                                                <p>
+                                                    You can customize Gulp tasks to your need by editing <code>gulpfile.js</code> file.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="sass" aria-labelledby="sass-tab" aria-expanded="false">
+                                        <div class="bg-white padding-25 white-box h-100">
+                                            <h4 class="mt-0 box-title">Sass</h4>
+                                            <p class="text-muted m-b-20 box-content">
+                                                Sass is an extension of CSS that adds power and elegance to the basic language. It allows you to use variables, nested rules, mixins, inline imports, and more, all with a fully CSS-compatible syntax.
+                                            </p>
+                                            <p>This is the structure of our <code>sass</code> folder.</p>
+                                            <div class="row">
+                                                <div class="col-12 col-lg-12">
+                                            <pre><code class="file-structure">
+    ├── sass/
+    │  ├── pages
+    │       ├── dashboard.scss
+    │       ├── documentation.scss
+    │       ├── error.scss
+    │       ├── invoice.scss
+    │       ├── lockscreen.scss
+    │       ├── login-register.scss
+    │       └── user-profile.scss
+    │   ├── partials
+    │       ├── animation.scss
+    │       ├── buttons.scss
+    │       ├── cards.scss
+    │       ├── color-settings.scss
+    │       ├── colors.scss
+    │       ├── dark-sidebar.scss
+    │       ├── default-colors.scss
+    │       ├── fixed-header.scss
+    │       ├── fonts.scss
+    │       ├── forms.scss
+    │       ├── globals.scss
+    │       ├── header-footer.scss
+    │       ├── helper-classes.scss
+    │       ├── icons.scss
+    │       ├── images.scss
+    │       ├── light-header.scss
+    │       ├── mixins.scss
+    │       ├── modals.scss
+    │       ├── nav-md.scss
+    │       ├── nav-sm.scss
+    │       ├── notifications.scss
+    │       ├── progress-bars.scss
+    │       ├── right-sidebar.scss
+    │       ├── rtl.scss
+    │       ├── sidebar.scss
+    │       ├── sliders.scss
+    │       ├── tables.scss
+    │       ├── tabs-accordions.scss
+    │       ├── theme-colors.scss
+    │       ├── theme-settings.scss
+    │       ├── typography.scss
+    │       └── variables.scss
+    │   └── main.scss
+    </code></pre>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <p><b><code>sass/pages</code> folder</b></p>
+                                                    <p class="text-muted m-b-20 box-content">Custom <code>sass</code> files for different pages are located here, which compiles as separate css.
+                                                        They are loading only for corresponding pages.
+                                                        As they are named the same as <code>html</code> files of pages, admin can find them easily by the name.</p>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered table-striped m-b-40">
+                                                            <thead>
+                                                            <tr>
+                                                                <th>
+                                                                    Name
+                                                                </th>
+                                                                <th>
+                                                                    Description
+                                                                </th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
+                                                                <td>dashboard.scss</td>
+                                                                <td>The stylesheets for the main page <a href="index.html"><b>index.html</b></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>documentation.scss</td>
+                                                                <td>The stylesheets for the documentation page <a href="documentation.html"><b>documentation.html</b></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>error.scss</td>
+                                                                <td>The stylesheets for the error pages <a href="403-error.html"><b>403-error.html</b></a>, <a href="404-error.html"><b>404-error.html</b></a>, <a href="500-error.html"><b>500-error.html</b></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>invoice.scss</td>
+                                                                <td>The stylesheets for the invoice page <a href="invoice.html"><b>invoice.html</b></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>lockscreen.scss</td>
+                                                                <td>The stylesheets for the lockscreen page <a href="lockscreen.html"><b>lockscreen.html</b></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>login-register.scss</td>
+                                                                <td>The stylesheets for the login and register pages <a href="login.html"><b>login.html</b></a>,  <a href="loginV2.html"><b>loginV2.html</b></a>, <a href="register.html"><b>register.html</b></a>, <a href="registerV2.html"><b>registerV2.html</b></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>user-profile.scss</td>
+                                                                <td>The stylesheets for the profile page <a href="user-profile.html"><b>user-profile.html</b></a></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <p><b><code>sass/partials</code> folder</b></p>
+                                                    <p class="text-muted m-b-20 box-content"><code>sass</code> files are located here. They are global for all pages, and all files are importing in <code>sass/main.scss</code> file. After compilation, they become as a whole <code>main.css</code> file.</p>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered table-striped m-b-40">
+                                                            <thead>
+                                                            <tr>
+                                                                <th>
+                                                                    Name
+                                                                </th>
+                                                                <th>
+                                                                    Description
+                                                                </th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
+                                                                <td style="width: 20%;">animation.scss</td>
+                                                                <td>Custom animation stylesheets</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>buttons.scss</td>
+                                                                <td>Contains all stylesheets for buttons and dropdowns</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>cards.scss</td>
+                                                                <td>Contains all stylesheets for cards</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>carousel.scss</td>
+                                                                <td>Contains all stylesheets for carousel</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>color-settings.scss</td>
+                                                                <td>
+                                                                    Contains all stylesheets that are temporary. This file is compiling separate, becomes <code>color-settings.css</code>. <code>color-settings.css</code> file is loading before admin will customize site settings
+                                                                    and will be removed from site after customizing, and will be replaced with another css which is written in <code>html/settings/theme-settings.html</code>, this file contains the same css only with the values chosen by admin.
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>colors.scss</td>
+                                                                <td>Contains all stylesheets for background colors and stylesheets for the <a href="ui-colors.html"><b>ui-colors.html</b></a> page</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>dark-sidebar.scss</td>
+                                                                <td>Contains all stylesheets for <b>Dark Sidebar</b></td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>default-colors.scss</td>
+                                                                <td>Contains all dynamic variables of colors with default values, admin can change these variables with values what he want. </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>fixed-header.scss</td>
+                                                                <td>Contains all stylesheets for <b>Fixed Header</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>fonts.scss</td>
+                                                                <td>Contains all stylesheets for fonts</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>forms.scss</td>
+                                                                <td>Contains all stylesheets for form elements</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>globals.scss</td>
+                                                                <td>Contains all global stylesheets</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>header-footer.scss</td>
+                                                                <td>Contains all stylesheets for <b>header</b> and <b>footer</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>helper-classes.scss</td>
+                                                                <td>Contains all helper classes that make work easier</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>icons.scss</td>
+                                                                <td>Contains all stylesheets for icons</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>images.scss</td>
+                                                                <td>Contains all stylesheets for images and <a href="ui-images.html"><b>ui-images.html</b></a> page</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>light-header.scss</td>
+                                                                <td>Contains all stylesheets <b>Light Header</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>mixins.scss</td>
+                                                                <td>Contains all CSS functions that you can include whenever you want</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>modals.scss</td>
+                                                                <td>Contains all stylesheets for modals</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>nav-md.scss</td>
+                                                                <td>Contains all stylesheets for wide sidebar</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>nav-sm.scss</td>
+                                                                <td>Contains all stylesheets for small sidebar</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>notifications.scss</td>
+                                                                <td>Contains all stylesheets for notifications (badges, alerts)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>progress-bars.scss</td>
+                                                                <td>Contains all stylesheets for progress bars</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>right-sidebar.scss</td>
+                                                                <td>Contains all stylesheets <b>Right Sidebar</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>rtl.scss</td>
+                                                                <td>Contains all stylesheets <b>RTL content</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>sidebar.scss</td>
+                                                                <td>Sidebar stylesheets</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>sliders.scss</td>
+                                                                <td>Contains all stylesheets for sliders</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>tables.scss</td>
+                                                                <td>Contains all stylesheets for tables and datatables</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>tabs-accordions.scss</td>
+                                                                <td>Contains all stylesheets for tabs and accordions</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>theme-colors.scss</td>
+                                                                <td>Contains all stylesheets for theme color</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>theme-settings.scss</td>
+                                                                <td>Contains all stylesheets for sidebar of settings</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>typography.scss</td>
+                                                                <td>Contains all typo related stylesheets</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>variables.scss</td>
+                                                                <td>Sass variables</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="javascript" aria-labelledby="javascript-tab" aria-expanded="false">
+                                        <div class="row">
+                                            <div class="col-12 m-b-10">
+                                                <div class="bg-white padding-25 white-box h-100">
+                                                    <h4 class="mt-0 box-title">Javascript</h4>
+                                                    <p class="text-muted m-b-20 box-content">
+                                                        This is the structure of our <code>js</code> folder.
+                                                    </p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-12">
+<pre>
+<code class="file-structure">
+    ├── js/
+    │      ├── theme-settings
+    │          ├── jscolor.min.js
+    │          └── settings.js
+    │      ├── charts.js
+    │      └── main.js
+</code>
+</pre>
+                                                        </div>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <p><b><code>js/theme-settings</code> folder</b></p>
+                                                            <p class="text-muted m-b-20 box-content">
+                                                                We put all js scripts related to settings here. <code>jscolor.min.js</code> file is about color picker. This allows admin to choose his preferred colors from settings sidebar.
+                                                                <code>settings.js</code> file is all about site settings. All script is written here that allows admin to customize site, layout settings, color settings.
+                                                                You can remove this folder anytime, when you don't need to customize the theme anymore.
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p><b><code>charts.js</code> file</b></p>
+                                                            <p class="text-muted m-b-20 box-content">
+                                                                <code>charts.js</code> file includes all scripts about charts. There is not used any plugin for them. We have three types of charts: Stacked Area chart, Column chart and Pie chart.
+                                                                To get any type of chart, firstly you need to write <code>div</code> tag at needed place with <code>id</code> attribute, for example
+                                                                <code>&#60;div id="exampleChart"&#62;&#60;&#8725;div&#62;</code>, then go to for example <code>charts.js</code> file and write JSON for this <code>id</code>. It will contain all data about your chart. </p>
+                                                            <ol>
+                                                                <li>
+                                                                    <p><i>Area charts</i>: These types of charts are a good choice to use when you want to show a trend over time. They can show how just one quantity changes, or show the changes in many quantities.
+                                                                        Sometimes, you may need to represent how several quantities combine to make a whole. A stacked area chart is great at this! A stacked area chart shows how much each part contributes to the whole amount.
+                                                                        To get this type of chart, firstly you need to write <code>div</code> tag at needed place with <code>id</code> attribute,
+                                                                        then go to for example <code>charts.js</code> file and write JSON for this <code>id</code>. That must be similar to this:</p>
+                                                                    <div class="row">
+                                                                        <div class="col-12 col-lg-6">
+<pre>
+<code class="file-structure">
+charts.areaChart('exampleAreaChart', {
+    width: 95+"%",
+    height: 300,
+    tooltips: true,
+    labels: true,
+    xAxis: {
+        categories: ['2012', '2013', '2014', '2015', '2016', '2017']
+    },
+    yAxis: {
+        labels: ['0', '5', '10', '15', '20']
+    },
+    series: [
+        {
+        name: 'Serie 1',
+        data: [2, 9, 10, 7.3, 5.5, 17],
+        color: '#efecf1'
+        },
+        {
+        name: 'Serie 2',
+        data: [7.7, 6, 7.8, 4, 2, 15],
+        color: '#4DD0E1'
+        }
+    ]
+});
+</code>
+</pre>
+                                                                        </div>
+                                                                        <div class="col-12 col-lg-5">
+                                                                            <div class="d-flex align-items-center justified-content-center w-100 h-100">
+                                                                                <img src="img/area-chart.png" alt="Area Chart" class="img-fluid">
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                            <p>
+                                                                                <code>areaChart</code> tells us that this is a Area chart. You need to set <code>width</code> of the chart here.
+                                                                                If you want to set the value of width with pixels, you need to write just a number. If you want to set the value with percentage,
+                                                                                write as written in above, but in this case you need to wrap your <code>div</code> with parent, which have width,
+                                                                                your chart will take its parent width with already set percentage. To set <code>height</code>, write value with pixels (only number).
+                                                                                <code>tooltips</code> show data. When you hover on the points, you can on and off this option. It depends from the value you set (true or false).
+                                                                                <code>labels</code> are the values in x and y axes. You also can on and off them by setting their values true or false.
+                                                                                <code>xAxis</code> and <code>yAxis</code> are arrays of values of points accordingly on x and y axes. <code>series</code> is array of objects series.
+                                                                                You can set them as much as you want. Each one contains <code>name</code>, <code>data</code> and <code>color</code>.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <p><i>Column chart</i>: A Column chart is a graphic representation of data. Column charts display vertical bars going across the chart horizontally,
+                                                                        with the values axis being displayed on the left side of the chart.
+                                                                        To get this type of chart, firstly you need to write <code>div</code> tag at needed place with <code>id</code> attribute, for example
+                                                                        <code>&#60;div id="exampleColumnChart"&#62;&#60;&#8725;div&#62;</code>, then go to for example <code>charts.js</code> file and write JSON for this <code>id</code>. That must be similar to this:</p>
+                                                                    <div class="row">
+                                                                        <div class="col-12 col-lg-6">
+<pre>
+<code class="file-structure">
+charts.columnChart('exampleColumnChart', {
+    width: 90+"%",
+    height: 300,
+    barWidth: 18,
+    tooltips: true,
+    labels: true,
+    xAxis: {
+        categories: ['0.0', '1.0', '2.0', '3.0', '4.0', '5.0',  '6.0', '7.0', '8.0', '9.0', '10.0']
+    },
+    yAxis: {
+        labels: ['0', '20', '40', '60', '80', '100']
+    },
+    series: [
+        {
+            name: 'Serie 1',
+            data: [15, 18, 22, 29, 39, 37, 55, 67, 61, 50, 42],
+            color: '#efecf1'
+        },
+        {
+            name: 'Serie 2',
+            data: [2, 6, 7.8, 4, 12, 15, 10, 7.3, 19, 17, 8.3],
+            color: '#4DD0E1'
+        }
+    ]
+});
+</code>
+</pre>
+                                                                        </div>
+                                                                        <div class="col-12 col-lg-5">
+                                                                            <div class="d-flex align-items-center justified-content-center w-100 h-100">
+                                                                                <img src="img/column-chart.png" alt="Column Chart" class="img-fluid">
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                            <p>
+                                                                                <code>columnChart</code> tells us that this is a Column chart. You need to set here <code>width</code> of the chart, if you want to set the value of width with pixels you need to write just a number, if you want to set the value with percentage, write as written in above, but in this case you need to wrap your <code>div</code> with parent which have width and your chart will take its parent width with set percentage. For the <code>height</code> write value with pixels (only number). <code>tooltips</code> are showing data when you hover on the points, you can on and off this option, it depents from the value you set (true or false). <code>labels</code> are the values in the x and y axises, you also can on and off them by setting their values true or false.
+                                                                                <code>xAxis</code> and <code>yAxis</code> accordingly are arrays of values of points on x and y axises. <code>series</code> is array of objects series, you can set them how much you want, each one contains <code>name</code>, <code>data</code>, and <code>color</code>.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>
+                                                                        <i>Pie chart</i>: Pie chart (or circle chart) is a circular statistical graphic, which is divided into slices to illustrate numerical proportion.
+                                                                        In pie chart, the arc length of each slice (and consequently its central angle and area) is proportional to the quantity it represents.
+                                                                        To get this type of chart, firstly you need to write <code>div</code> tag at needed place with <code>id</code> attribute,
+                                                                        for example <code>&#60;div id="examplePieChart"&#62;&#60;&#8725;div&#62;</code>,
+                                                                        then go to for example <code>charts.js</code> file and write JSON for this <code>id</code>. That must be similar to this:</p>
+                                                                    <div class="row">
+                                                                        <div class="col-12 col-lg-6">
+<pre>
+<code class="file-structure">
+charts.pieChart('examplePieChart', {
+    size: 200,
+    labels:true,
+    sectors: [
+        {
+            percentage: 45,
+            name: 'Serie 1',
+            color: '#4DD0E1'
+        },
+        {
+            percentage: 21,
+            name: "Serie 2",
+            color: '#6d5cae'
+        },
+        {
+            percentage: 11,
+            name: "Serie 3",
+            color: '#0aa89e'
+        },
+        {
+            percentage: 23,
+            name: "Serie 4",
+            color: '#fa0'
+        }
+    ]
+});
+</code>
+</pre>
+                                                                        </div>
+                                                                        <div class="col-12 col-lg-5">
+                                                                            <div class="d-flex align-items-center justified-content-center w-100 h-100">
+                                                                                <img src="img/pie-chart.png" alt="Pie Chart" class="img-fluid">
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                            <p>
+                                                                                <code>pieChart</code> tells that this is a Pie chart. You need to set <code>size</code> of the chart here. It will be diameter of your circle with pixels.
+                                                                                <code>labels</code> tell us about the values of the sectors. You can show or hide them by setting their values true or false.
+                                                                                And surely <code>sectors</code>, which is an array of sectors. You can add them as much as you want. They contain <code>percentage</code>, <code>name</code> and <code>color</code>.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ol>
+                                                        </li>
+                                                        <li>
+                                                            <p><b><code>main.js</code> file</b></p>
+                                                            <p>This file contains all global functions, events on site, for example open and close sidebar menu, form wizard, collapsible table, sliders.</p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="browserSupport" aria-labelledby="browserSupport-tab" aria-expanded="false">
+                                        <div class="row">
+                                            <div class="col-12 m-b-10">
+                                                <div class="bg-white padding-25 white-box h-100">
+                                                    <h4 class="mt-0 box-title">Browser Support</h4>
+                                                    <p class="text-muted m-b-20 box-content">
+                                                        <b>MUSA</b> is perfect to work for a wide range of browsers.
+                                                    </p>
+                                                    <ul>
+                                                        <li><p>Chrome</p></li>
+                                                        <li><p>Firefox</p></li>
+                                                        <li><p>Safari</p></li>
+                                                        <li><p>Opera</p></li>
+                                                        <li><p>IE10+</p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        //= partials/footer.html
+        <!-- /footer content -->
+
+    </div>
+</div>
+
+<!-- site foot -->
+//= partials/site-foot.html
+<!-- /site foot -->

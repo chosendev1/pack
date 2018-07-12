@@ -1,0 +1,383 @@
+/*------------------------------------------------------------------
+[Tabs & Accordians]
+*/
+
+/*
+1. Basic
+2. Tabs : Simple
+3. Tabs : Line Triangles
+-------------------------------------------------------------------*/
+
+/* Tabs
+------------------------------------
+*/
+.nav-tabs {
+  position: relative;
+  .nav-item {
+    padding-left: 0;
+    padding-right: 0;
+    &.active{
+      > a {
+        border-color: $light-blue;
+        color: #51646b;
+        background-color: $light-blue;
+        &:hover, &:focus {
+          border-color: $light-blue;
+          color: #51646b;
+          background-color: $light-blue;
+        }
+      }
+    }
+    .nav-link {
+      display: block;
+      @include border-radius(0);
+      padding: 9px 20px;
+      margin-right: 0;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(98,98,98,0.7);
+      font-size: 15px;
+      min-width: 70px;
+      border: 0;
+      position: relative;
+      line-height: 1.7em;
+      background-color: transparent;
+      &:hover, &:focus, &.active {
+        background: transparent;
+        border: none;
+      }
+      .tab-icon {
+        margin-right: 6px;
+      }
+    }
+  }
+  ~ .tab-content {
+    overflow: hidden;
+    padding: 15px;
+  }
+  &.nav-tabs-left, &.nav-tabs-right {
+    &:after{
+      border-bottom: 0;
+    }
+  }
+  &.nav-tabs-left, &.nav-tabs-right {
+    > li{
+      float: none;
+      width: 100%;
+    }
+  }
+  &.nav-tabs-left {
+    ~ .tab-content {
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+  &.nav-tabs-right {
+    ~ .tab-content {
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+
+/* Tabs : Simple
+------------------------------------
+*/
+.nav-tabs-simple{
+  border-bottom: 0;
+  &:after {
+    content: '';
+    border-bottom: 2px solid $light-blue;
+    width: 100%;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    z-index: 120;
+  }
+  > li {
+    margin-bottom: 0;
+    > a {
+      padding: 13px 20px 10px 20px;
+      &:after {
+        position: absolute;
+        @include transition(all 0.1s linear 0s);
+        -webkit-backface-visibility: hidden;
+        width: 100%;
+        display: block;
+        background-color: transparent;
+        height: 2px;
+        content: '';
+        left: 0;
+        z-index: 125;
+      }
+      &.active, &:hover{
+        border: 0;
+      }
+    }
+    &.nav-item{
+      .nav-link{
+        font-size: 13px;
+        padding: 13px 20px;
+      }
+    }
+  }
+  &.nav-tabs-simple-bottom{
+    > li {
+      > a {
+        &:after {
+          top: 100%;
+        }
+      }
+    }
+  }
+  &.nav-tabs-simple-top {
+    > li {
+      > a {
+        &:after {
+          top: 0;
+        }
+      }
+    }
+  }
+  &.nav-tabs-left {
+    border-right: 2px solid $light-blue;
+  }
+  &.nav-tabs-right {
+    border-left: 2px solid $light-blue;
+  }
+  &[aria-orientation="vertical"]{
+    >li{
+      >a{
+        &:after{
+          width: 2px;
+          height: 100%;
+          top: 0;
+          bottom: 0;
+          position: absolute;
+        }
+      }
+    }
+  }
+  &.nav-tabs-left, &.nav-tabs-right {
+    &:after{
+      border-bottom: 0;
+    }
+  }
+  &.nav-tabs-left, &.nav-tabs-right {
+    > li{
+      &:after{
+        width: 0;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+      }
+    }
+  }
+  &.nav-tabs-left, &.nav-tabs-right{
+    > li{
+      &.active, &:hover{
+        &:after{
+          width: 2px;
+        }
+      }
+    }
+  }
+  &.nav-tabs-left {
+    > li{
+      &:after {
+        right: 0;
+      }
+    }
+  }
+  &.nav-tabs-right {
+    > li{
+      &:after {
+        left: 0;
+      }
+    }
+  }
+}
+
+/* Tabs : Line Triangles
+------------------------------------
+*/
+
+.nav-tabs-linetriangle {
+  border-bottom: 0;
+  &:after {
+    content:"";
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: -2px;
+    z-index: 120;
+  }
+  > li {
+    > a {
+      @include border-radius(0);
+      &:hover{
+        border: 0;
+      }
+      &.active{
+        background: transparent;
+        box-shadow: none;
+        border-color: transparent;
+        &:hover, &:focus, &:active {
+          border-color: transparent;
+          background-color: transparent;
+        }
+        &:after, &:before {
+          border: medium solid transparent;
+          content: "";
+          height: 0;
+          left: 50%;
+          pointer-events: none;
+          position: absolute;
+          width: 0;
+          z-index: 121;
+        }
+        &:after {
+          border-top-color: #fff;
+          border-width: 10px;
+          margin-left: -10px;
+          top: 98%;
+        }
+        &:before {
+          border-width: 10px;
+          margin-left: -10px;
+          top: 100%;
+        }
+      }
+      span {
+        font-size: 1em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      overflow: visible;
+      @include transition(color 0.2s ease 0s);
+      &:hover, &:focus {
+        overflow: visible;
+        @include transition(color 0.2s ease 0s);
+      }
+    }
+    &.nav-item{
+      .nav-link{
+        font-size: 13px;
+        text-align: center;
+      }
+    }
+  }
+  ~ .tab-content {
+    background: #fff;
+  }
+  &.nav-tabs-left{
+    &.nav-tabs {
+      &:after {
+        border-bottom: none;
+      }
+      > .nav-item {
+        > .nav-link{
+          &.active{
+            &:before {
+              border-top: 11px solid transparent;
+              border-bottom: 11px solid transparent;
+              border-left: 11px solid rgba(0, 0, 0, 0.2);
+            }
+            &:after {
+              border-top: 10px solid transparent;
+              border-bottom: 10px solid transparent;
+              border-left: 10px solid #eef0f0;
+              margin-top: 1px;
+              margin-right: 2px;
+              top: auto;
+              right: -23px;
+              left: auto;
+            }
+            &:before {
+              top: auto;
+              right: -23px;
+              left: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.nav-tabs-right{
+    &.nav-tabs {
+      &:after {
+        border-bottom: none;
+      }
+      > .nav-item{
+        > .nav-link{
+          &.active {
+            &:before {
+              border-top: 11px solid transparent;
+              border-bottom: 11px solid transparent;
+              border-right: 11px solid rgba(0, 0, 0, 0.2);
+            }
+            &:after {
+              border-top: 10px solid transparent;
+              border-bottom: 10px solid transparent;
+              border-right: 10px solid #eef0f0;
+              margin-top: 1px;
+              margin-left: -9px;
+              top: auto;
+              left: -12px;
+              right: auto;
+            }
+            &:before {
+              top: auto;
+              left: -12px;
+              right: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Tabs : Vertical Tabs
+------------------------------------
+*/
+.vertical-tabs{
+  display: table;
+  .nav-tabs{
+    display: table-cell;
+    vertical-align: top;
+  }
+  .tab-content{
+    display: table-cell;
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 58em) {
+  .nav-tabs-linetriangle {
+    font-size: 0.6em;
+  }
+}
+
+@media screen and (max-width: 576px){
+  .nav-tabs{
+    .nav-item {
+      .nav-link {
+        padding: 8px 10px!important;
+      }
+    }
+  }
+}
+
+/* Accordions
+------------------------------------
+*/
+.collapse-group{
+  .card{
+    &:last-child{
+      .card-header{
+        border-bottom: 0;
+      }
+    }
+  }
+}

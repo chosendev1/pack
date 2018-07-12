@@ -1,0 +1,355 @@
+<!-- site head -->
+//= partials/site-head.html
+<!-- /site head -->
+
+    <div class="main-container">
+
+        <!-- sidebar -->
+        //= partials/sidebar.html
+        <!-- /sidebar -->
+
+        <div class="content-wrapper">
+
+            <!-- header content  -->
+            //= partials/header.html
+            <!-- /header content -->
+
+            <!-- theme settings-->
+            //= settings/theme-settings.html
+            <!-- /theme settings -->
+
+            <!-- page content -->
+            <div class="main-content small-gutter">
+                <!-- START PAGE COVER -->
+                <div class="row bg-title clearfix page-title">
+                    <div class="col-12 col-lg-3">
+                        <h4 class="page-title">Getting started!</h4>
+                    </div>
+                    <div class="col-12 col-lg-9">
+                        <!-- START breadcrumb -->
+                        <ol class="breadcrumb pl-0 pr-0 float-lg-right">
+                            <li><a href="index.html">Musa</a></li>
+                            <li><a href="javascript:void(0)">UI Elements</a></li>
+                            <li class="active">Notifications</li>
+                        </ol>
+                        <!-- END breadcrumb -->
+                    </div>
+                    <div class="col-12">
+                        <h3>Notifications</h3>
+                    </div>
+                </div>
+                <!-- END PAGE COVER -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-xl-6 m-b-10">
+                            <div class="bg-white padding-25 white-box h-100">
+                                <h4 class="mt-0 box-title">Alerts</h4>
+                                <div class="alert alert-primary" role="alert">
+                                    This is a primary alert—check it out!
+                                </div>
+                                <div class="alert alert-secondary" role="alert">
+                                    This is a secondary alert—check it out!
+                                </div>
+                                <div class="alert alert-success" role="alert">
+                                    This is a success alert—check it out!
+                                </div>
+                                <div class="alert alert-danger" role="alert">
+                                    This is a danger alert—check it out!
+                                </div>
+                                <div class="alert alert-warning" role="alert">
+                                    This is a warning alert—check it out!
+                                </div>
+                                <div class="alert alert-info" role="alert">
+                                    This is a info alert—check it out!
+                                </div>
+                                <div class="alert alert-light" role="alert">
+                                    This is a light alert—check it out!
+                                </div>
+                                <div class="alert alert-dark" role="alert">
+                                    This is a dark alert—check it out!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6 m-b-10">
+                            <div class="bg-white padding-25 white-box h-100">
+                                <h4 class="mt-0 box-title">Alerts with the link</h4>
+                                <div class="alert alert-primary" role="alert">
+                                    This is a primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                                </div>
+                                <div class="alert alert-secondary" role="alert">
+                                    This is a secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                                </div>
+                                <div class="alert alert-success" role="alert">
+                                    This is a success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                                </div>
+                                <div class="alert alert-danger" role="alert">
+                                    This is a danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                                </div>
+                                <div class="alert alert-warning" role="alert">
+                                    This is a warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                                </div>
+                                <div class="alert alert-info" role="alert">
+                                    This is a info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                                </div>
+                                <div class="alert alert-light" role="alert">
+                                    This is a light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                                </div>
+                                <div class="alert alert-dark" role="alert">
+                                    This is a dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6 m-b-10">
+                            <div class="bg-white padding-25 white-box h-100">
+                                <h4 class="mt-0 box-title">Additional content</h4>
+                                <p class="text-muted m-b-20 box-content">
+                                    Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
+                                </p>
+                                <div class="alert alert-success" role="alert">
+                                    <h4 class="alert-heading">Well done!</h4>
+                                    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                                    <hr>
+                                    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6 m-b-10">
+                            <div class="bg-white padding-25 white-box h-100">
+                                <h4 class="mt-0 box-title">Dismissing</h4>
+                                <p class="text-muted m-b-20 box-content">
+                                    It’s possible to dismiss any alert inline. Here’s how:
+                                </p>
+                                <ul>
+                                    <li>Be sure you’ve loaded the alert plugin, or the compiled Bootstrap JavaScript.</li>
+                                    <li>Add a dismiss button and the <code class="highlighter-rouge">.alert-dismissible</code> class, which adds extra padding to the right of the alert and positions the <code class="highlighter-rouge">.close</code> button.</li>
+                                    <li>On the dismiss button, add the <code class="highlighter-rouge">data-dismiss="alert"</code> attribute, which triggers the JavaScript functionality. Be sure to use the <code class="highlighter-rouge">&lt;button&gt;</code> element with it for proper behavior across all devices.</li>
+                                    <li>To animate alerts when dismissing them, be sure to add the <code class="highlighter-rouge">.fade</code> and <code class="highlighter-rouge">.show</code> classes.</li>
+                                </ul>
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-12 col-xl-6 m-b-10">
+                            <div class="bg-white padding-25 white-box h-100">
+                                <h4 class="mt-0 box-title">Raised alerts</h4>
+                                <div class="alert alert-primary alert-raised" role="alert">
+                                    This is a primary alert—check it out!
+                                </div>
+                                <div class="alert alert-secondary alert-raised" role="alert">
+                                    This is a secondary alert—check it out!
+                                </div>
+                                <div class="alert alert-success alert-raised" role="alert">
+                                    This is a success alert—check it out!
+                                </div>
+                                <div class="alert alert-danger alert-raised" role="alert">
+                                    This is a danger alert—check it out!
+                                </div>
+                                <div class="alert alert-warning alert-raised" role="alert">
+                                    This is a warning alert—check it out!
+                                </div>
+                                <div class="alert alert-info alert-raised" role="alert">
+                                    This is a info alert—check it out!
+                                </div>
+                                <div class="alert alert-light alert-raised" role="alert">
+                                    This is a light alert—check it out!
+                                </div>
+                                <div class="alert alert-dark alert-raised" role="alert">
+                                    This is a dark alert—check it out!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6 m-b-10">
+                            <div class="bg-white padding-25 white-box h-100">
+                                <h4 class="mt-0 box-title">Alerts with icon</h4>
+                                <div class="alert alert-primary alert-raised" role="alert">
+                                    <i class="fa fa-bell" aria-hidden="true"></i> <strong>NEWS :</strong>You have done 5 actions.
+                                </div>
+                                <div class="alert alert-success alert-raised" role="alert">
+                                    <i class="fa fa-check" aria-hidden="true"></i> <strong>SUCCESS :</strong>The page has been added.
+                                </div>
+                                <div class="alert alert-danger alert-raised" role="alert">
+                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i> <strong>DANGER :</strong>The daily report has failed
+                                </div>
+                                <div class="alert alert-warning alert-raised" role="alert">
+                                    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i><strong>WARNING :</strong>Bandwidth limit exceeded
+                                </div>
+                                <div class="alert alert-info alert-raised" role="alert">
+                                    <i class="fa fa-info-circle" aria-hidden="true"></i><strong>INFO :</strong>You have 18 messages
+                                </div>
+                                <div class="alert alert-success alert-raised" role="alert">
+                                    <h4 class="alert-heading"> <i class="fa fa-check" aria-hidden="true"></i>Well done!</h4>
+                                    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                                    <hr>
+                                    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6 m-b-10">
+                            <div class="bg-white padding-25 white-box h-100">
+                                <h4 class="mt-0 box-title">Alerts with avatar</h4>
+                                <div class="alert alert-primary alert-raised" role="alert">
+                                    <img src="img/avatar.png" alt="Avatar" class="alert-image">
+                                    This is a info alert—check it out!
+                                </div>
+                                <div class="alert alert-success alert-raised" role="alert">
+                                    <img src="img/avatar.png" alt="Avatar" class="alert-image">
+                                    This is a info alert—check it out!
+                                </div>
+                                <div class="alert alert-danger alert-raised alert-dismissible fade show" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img src="img/avatar.png" alt="Avatar" class="alert-image">
+                                    <h4 class="alert-heading">Some Message!</h4>
+                                    <p class="mt-1">Lorem ipsum Minim ad pariatur eiusmod ea ut nulla aliqua est quis id dolore minim voluptate.Lorem ipsum Minim ad pariatur eiusmod ea ut nulla aliqua est quis id dolore minim voluptate.</p>
+                                    <hr>
+                                    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6 m-b-10">
+                            <div class="bg-white padding-25 white-box h-100">
+                                <h4 class="mt-0 box-title">Alerts with buttons</h4>
+                                <div class="alert alert-info alert-raised alert-dismissible fade show" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img src="img/avatar.png" alt="Avatar" class="alert-image">
+                                    <h4 class="alert-heading">Some Message!</h4>
+                                    <p class="mt-1">Lorem ipsum Minim ad pariatur eiusmod ea ut nulla aliqua est quis id dolore minim voluptate.Lorem ipsum Minim ad pariatur eiusmod ea ut nulla aliqua est quis id dolore minim voluptate.</p>
+                                    <hr>
+                                    <div class="mb-0 alert-actions">
+                                        <button class="btn btn-link">Ok</button>
+                                        <button class="btn btn-link ripple">Cancel</button>
+                                    </div>
+                                </div>
+                                <div class="alert alert-warning alert-raised alert-dismissible fade show" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img src="img/avatar.png" alt="Avatar" class="alert-image">
+                                    <h4 class="alert-heading">Some Message!</h4>
+                                    <p class="mt-1">Lorem ipsum Minim ad pariatur eiusmod ea ut nulla aliqua est quis id dolore minim voluptate.Lorem ipsum Minim ad pariatur eiusmod ea ut nulla aliqua est quis id dolore minim voluptate.</p>
+                                    <hr>
+                                    <div class="mb-0 alert-actions">
+                                        <button class="btn btn-link">Ok</button>
+                                        <button class="btn btn-link ripple">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6 m-b-10">
+                            <div class="bg-white padding-25 white-box h-100">
+                                <h4 class="mt-0 box-title">Badges</h4>
+                                <h1>Example heading <span class="badge badge-primary">New</span></h1>
+                                <h2>Example heading <span class="badge badge-success">New</span></h2>
+                                <h3>Example heading <span class="badge badge-info">New</span></h3>
+                                <h4>Example heading <span class="badge badge-warning">New</span></h4>
+                                <h5>Example heading <span class="badge badge-danger">New</span></h5>
+                                <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6 m-b-10">
+                            <div class="bg-white padding-25 white-box h-100">
+                                <h4 class="mt-0 box-title">Badges</h4>
+                                <p class="text-muted m-b-20 box-content">
+                                    Badges can be used as part of links or buttons to provide a counter.
+                                </p>
+                                <div class="button-box">
+                                    <button class="btn btn-primary">
+                                        Notifications <span class="badge badge-primary">4</span>
+                                    </button>
+                                    <button class="btn btn-secondary">
+                                        Profile <span class="badge badge-secondary">9</span>
+                                    </button>
+                                    <button class="btn btn-success">
+                                        Profile <span class="badge badge-success">9</span>
+                                    </button>
+                                    <button class="btn btn-info">
+                                        Profile <span class="badge badge-info">9</span>
+                                    </button>
+                                    <button class="btn btn-warning">
+                                        Profile <span class="badge badge-warning">9</span>
+                                    </button>
+                                    <button class="btn btn-danger">
+                                        Profile <span class="badge badge-danger">9</span>
+                                    </button>
+                                    <button class="btn btn-light">
+                                        Profile <span class="badge badge-light">9</span>
+                                    </button>
+                                    <button class="btn btn-dark">
+                                        Profile <span class="badge badge-dark">9</span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-4 m-b-10">
+                            <div class="bg-white padding-25 white-box h-100">
+                                <h4 class="mt-0 box-title">Contextual variations</h4>
+                                <p class="text-muted m-b-20 box-content">
+                                    Add any of the below mentioned modifier classes to change the appearance of a badge.
+                                </p>
+                                <span class="badge badge-primary">Primary</span>
+                                <span class="badge badge-secondary">Secondary</span>
+                                <span class="badge badge-success">Success</span>
+                                <span class="badge badge-danger">Danger</span>
+                                <span class="badge badge-warning">Warning</span>
+                                <span class="badge badge-info">Info</span>
+                                <span class="badge badge-light">Light</span>
+                                <span class="badge badge-dark">Dark</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-4 m-b-10">
+                            <div class="bg-white padding-25 white-box h-100">
+                                <h4 class="mt-0 box-title">Pill badges</h4>
+                                <p class="text-muted m-b-20 box-content">
+                                    Use the <code>badge-pill</code> modifier class to make badges more rounded (with a larger <code>border-radius</code> and additional horizontal padding).
+                                </p>
+                                <span class="badge badge-pill badge-primary">Primary</span>
+                                <span class="badge badge-pill badge-secondary">Secondary</span>
+                                <span class="badge badge-pill badge-success">Success</span>
+                                <span class="badge badge-pill badge-danger">Danger</span>
+                                <span class="badge badge-pill badge-warning">Warning</span>
+                                <span class="badge badge-pill badge-info">Info</span>
+                                <span class="badge badge-pill badge-light">Light</span>
+                                <span class="badge badge-pill badge-dark">Dark</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-4 m-b-10">
+                            <div class="bg-white padding-25 white-box h-100">
+                                <h4 class="mt-0 box-title">Links</h4>
+                                <p class="text-muted m-b-20 box-content">
+                                    Using the <code>badge</code> classes with the <code>a</code> element quickly provide actionable badges with hover and focus states.
+                                </p>
+                                <a href="#" class="badge badge-primary">Primary</a>
+                                <a href="#" class="badge badge-secondary">Secondary</a>
+                                <a href="#" class="badge badge-success">Success</a>
+                                <a href="#" class="badge badge-danger">Danger</a>
+                                <a href="#" class="badge badge-warning">Warning</a>
+                                <a href="#" class="badge badge-info">Info</a>
+                                <a href="#" class="badge badge-light">Light</a>
+                                <a href="#" class="badge badge-dark">Dark</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /page content -->
+
+            <!-- footer content -->
+            //= partials/footer.html
+            <!-- /footer content -->
+
+        </div>
+    </div>
+
+<!-- site foot -->
+//= partials/site-foot.html
+<!-- /site foot -->

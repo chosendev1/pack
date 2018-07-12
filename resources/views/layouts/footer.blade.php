@@ -1,19 +1,15 @@
-<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/chart.min.js"></script>
-	<script src="js/chart-data.js"></script>
-	<script src="js/easypiechart.js"></script>
-	<script src="js/easypiechart-data.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
-	<script src="js/custom.js"></script>
-	<script>
-		window.onload = function () {
-	var chart1 = document.getElementById("line-chart").getContext("2d");
-	window.myLine = new Chart(chart1).Line(lineChartData, {
-	responsive: true,
-	scaleLineColor: "rgba(0,0,0,.2)",
-	scaleGridLineColor: "rgba(0,0,0,.05)",
-	scaleFontColor: "#c5c7cc"
-	});
-    };
-	</script>
+<footer class="footer">
+    <div class="float-right">
+        Admin Template by <a href="javascript:void(0)" class="company-name text-theme">
+        <span class="icon-admin-logo"></span>
+    </a>
+    </div>
+    <div class="clearfix"></div>
+</footer>
+
+<!-- color settings  -->
+ @include('settings.color-settings')
+<!-- /color settings -->
+<!-- color settings  -->
+ @include('settings.scss-colors-settings')
+<!-- /color settings -->

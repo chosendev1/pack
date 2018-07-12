@@ -24,10 +24,10 @@ class CreateLoanApplicationsTable extends Migration
 
             $table->softDeletes();
 
-           // $table->foreign('customer_id')->references('id')->on('customers')
-             //      ->onDelete('cascade')->onUpdate('cascade');
-            //$table->foreign('loan_product_id')->references('id')->on('loan_products')
-              //   ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('customer_id')->references('id')->on('customers')
+                ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('loan_product_id')->references('id')->on('loan_products')
+                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
     /**
