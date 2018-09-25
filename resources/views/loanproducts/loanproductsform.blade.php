@@ -37,8 +37,10 @@
             <div class="col-sm-4 form-group">
                 <label for="interestMethod">Interest Method</label>
                   <select class="form-control" name="interest_method" id="interestMethod">
-                    <option>Flat</option>
-                    <option>Amortised</option>
+                    <option value="">--Choose--</option>
+                    <option value="flat">Flat</option>
+                    <option value="declining">Declining Balance</option>
+                    <option value="amortised">Amortised</option>
                   </select>
             </div>
             <div class="col-sm-4 form-group">

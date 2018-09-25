@@ -1,94 +1,142 @@
-<header class="header">
-    <nav class="header-menu">
-        <div class="nav toggle">
-            <a href="javascript:void(0)" id="menu-toggle" class="ripple">
-                <span class="bars"></span>
-            </a>
+<div class="header py-4">
+  <div class="container">
+    <div class="d-flex">
+      <a class="header-brand" href="./index.html">
+        <img src="/demo/brand/tabler.svg" class="header-brand-img" alt="tabler logo">
+      </a>
+      <div class="d-flex order-lg-2 ml-auto">
+        <div class="nav-item d-none d-md-flex">
+          <a href="https://github.com/tabler/tabler" class="btn btn-sm btn-outline-primary" target="_blank">Source code</a>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li class="search-wrap d-sm-none d-md-block">
-                <form action="" autocomplete="on">
-                    <input type="text" name="search" class="search" placeholder="What're we looking for?">
-                    <div>
-                        <button class="search-submit" value="" type="submit"> <i class="fa fa-search" aria-hidden="true"></i></button>
-                    </div>
-                </form>
-            </li>
-            <li role="presentation" class="dropdown notifications-list">
-                <a href="javascript:void(0)" class="dropdown-toggle info-number ripple" data-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-bell-o"></i>
-                    <span class="badge">6</span>
-                </a>
-                <ul id="menu" class="dropdown-menu list-unstyled dropdown-menu-lg" role="menu">
-                    <li class="notif-title"> Notifications
-                        <button type="button" class="float-right close btn btn-circle d-none d-block-xs"><i class="fa fa-close"></i></button>
-                    </li>
-                    <li class="list-group notification-list">
-                      <ul class="p-0">
-                          <!-- list item-->
-                          <li class="list-group-item">
-                              <a href="javascript:void(0);">
-                                  <div class="m-r-10 notif-img float-left">
-                                      <i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></i>
-                                  </div>
-                                  <div class="notif-info"><p class="text-danger notif-text">98% Server Load</p>
-                                      <time class="float-right">12 min ago</time>
-                                  </div>
-                              </a>
-                          </li>
-                          <!-- list item-->
-                          <li class="list-group-item">
-                              <a href="javascript:void(0);">
-                                  <div class="m-r-10 notif-img float-left">
-                                      <i class="fa fa-exclamation-triangle text-warning " aria-hidden="true"></i>
-                                  </div>
-                                  <div class="notif-info"><p class="text-warning notif-text">Warning Notification</p>
-                                      <time class="float-right">12 min ago</time>
-                                  </div>
-                              </a>
-                          </li>
-                          <!-- list item-->
-                          <li class="list-group-item">
-                              <a href="javascript:void(0);">
-                                  <div class="m-r-10 notif-img float-left">
-                                      <i class="fa fa-check-circle text-success" aria-hidden="true"></i>
-                                  </div>
-                                  <div class="notif-info"><p class="text-success notif-text">Success Notification</p>
-                                    <time class="float-right">12 min ago</time>
-                                  </div>
-                              </a>
-                          </li>
-
-                      </ul>
-                    </li>
-                    <li class="read-all-notif"><a href="javascript:void(0)">Read all notifications<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                </ul>
-            </li>
-            <li class="profile-dropdown dropdown">
-                <a href="javascript:void(0)" class="user-profile dropdown-toggle ripple" data-toggle="dropdown" aria-expanded="false">
-                    <img src="img/avatar.png" alt="Profile picture" class="rounded-circle">
-                    <span class="d-none d-sm-block">James Mcavoy</span>
-                    <span class="fa fa-angle-down"></span>
-                </a>
-                <ul class="dropdown-menu float-right">
-                    <li class="d-none d-block-xs p-0">
-                        <button type="button" class="close btn btn-circle"><i class="fa fa-close"></i></button>
-                        <div class="profile clearfix">
-                            <div class="profile-pic">
-                                <img src="img/avatar.png" alt="Profile picture" class="rounded-circle profile-img">
-                            </div>
-                            <div class="profile-info">
-                                <h2>James Mcavoy</h2>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="user-profile.html"><i class="fa fa-user-o" aria-hidden="true"></i>Profile</a></li>
-                    <li><a href="javascript:void(0)"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a></li>
-                    <li><a href="lockscreen.html"><i class="fa fa-lock" aria-hidden="true"></i> Lock screen</a></li>
-                    <li class="divider"></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
-                </ul>
-            </li>
+        <div class="dropdown d-none d-md-flex">
+          <a class="nav-link icon" data-toggle="dropdown">
+            <i class="fe fe-bell"></i>
+            <span class="nav-unread"></span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+            <a href="#" class="dropdown-item d-flex">
+              <span class="avatar mr-3 align-self-center" style="background-image: url(demo/faces/male/41.jpg)"></span>
+              <div>
+                <strong>Nathan</strong> pushed new commit: Fix page load performance issue.
+                <div class="small text-muted">10 minutes ago</div>
+              </div>
+            </a>
+            <a href="#" class="dropdown-item d-flex">
+              <span class="avatar mr-3 align-self-center" style="background-image: url(demo/faces/female/1.jpg)"></span>
+              <div>
+                <strong>Alice</strong> started new task: Tabler UI design.
+                <div class="small text-muted">1 hour ago</div>
+              </div>
+            </a>
+            <a href="#" class="dropdown-item d-flex">
+              <span class="avatar mr-3 align-self-center" style="background-image: url(demo/faces/female/18.jpg)"></span>
+              <div>
+                <strong>Rose</strong> deployed new version of NodeJS REST Api V3
+                <div class="small text-muted">2 hours ago</div>
+              </div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item text-center text-muted-dark">Mark all as read</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
+            <span class="avatar" style="background-image: url(./demo/faces/female/25.jpg)"></span>
+            <span class="ml-2 d-none d-lg-block">
+              <span class="text-default">Jane Pearson</span>
+              <small class="text-muted d-block mt-1">Administrator</small>
+            </span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+            <a class="dropdown-item" href="#">
+              <i class="dropdown-icon fe fe-user"></i> Profile
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="dropdown-icon fe fe-settings"></i> Settings
+            </a>
+            <a class="dropdown-item" href="#">
+              <span class="float-right"><span class="badge badge-primary">6</span></span>
+              <i class="dropdown-icon fe fe-mail"></i> Inbox
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="dropdown-icon fe fe-send"></i> Message
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <i class="dropdown-icon fe fe-help-circle"></i> Need help?
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="dropdown-icon fe fe-log-out"></i> Sign out
+            </a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
+        <span class="header-toggler-icon"></span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-3 ml-auto">
+        <form class="input-icon my-3 my-lg-0">
+          <input type="search" class="form-control header-search" placeholder="Search&hellip;" tabindex="1">
+          <div class="input-icon-addon">
+            <i class="fe fe-search"></i>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg order-lg-first">
+        <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
+          <li class="nav-item">
+            <a href="/dashboard" class="nav-link"><i class="fe fe-home"></i>Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a href="/loan-products" class="nav-link" data-toggle="dropdown"><i class="fe fe-box"></i>Loan Products</a>
+            <!-- <div class="dropdown-menu dropdown-menu-arrow">
+              <a href="./cards.html" class="dropdown-item ">Cards design</a>
+              <a href="./charts.html" class="dropdown-item ">Charts</a>
+              <a href="./pricing-cards.html" class="dropdown-item ">Pricing cards</a>
+            </div> -->
+          </li>
+          <li class="nav-item dropdown">
+            <a href="/customers" class="nav-link" data-toggle="dropdown"><i class="fe fe-calendar"></i> Customers</a>
+            <!-- <div class="dropdown-menu dropdown-menu-arrow">
+              <a href="./maps.html" class="dropdown-item ">Maps</a>
+              <a href="./icons.html" class="dropdown-item ">Icons</a>
+              <a href="./store.html" class="dropdown-item ">Store</a>
+              <a href="./blog.html" class="dropdown-item ">Blog</a>
+              <a href="./carousel.html" class="dropdown-item ">Carousel</a>
+            </div> -->
+          </li>
+          <li class="nav-item dropdown">
+            <a href="/loan-applications" class="nav-link active" data-toggle="dropdown"><i class="fe fe-file"></i>Loans</a>
+            <!-- <div class="dropdown-menu dropdown-menu-arrow">
+              <a href="./profile.html" class="dropdown-item ">Profile</a>
+              <a href="./login.html" class="dropdown-item ">Login</a>
+              <a href="./register.html" class="dropdown-item ">Register</a>
+              <a href="./forgot-password.html" class="dropdown-item ">Forgot password</a>
+              <a href="./400.html" class="dropdown-item ">400 error</a>
+              <a href="./401.html" class="dropdown-item ">401 error</a>
+              <a href="./403.html" class="dropdown-item ">403 error</a>
+              <a href="./404.html" class="dropdown-item ">404 error</a>
+              <a href="./500.html" class="dropdown-item ">500 error</a>
+              <a href="./503.html" class="dropdown-item ">503 error</a>
+              <a href="./email.html" class="dropdown-item ">Email</a>
+              <a href="./empty.html" class="dropdown-item active">Empty page</a>
+              <a href="./rtl.html" class="dropdown-item ">RTL mode</a>
+            </div> -->
+          </li>
+          <li class="nav-item dropdown">
+            <a href="/payments" class="nav-link"><i class="fe fe-check-square"></i>Payments</a>
+          </li>
+          <li class="nav-item">
+            <a href="/reports" class="nav-link"><i class="fe fe-file-text"></i>Reports</a>
+          </li>
         </ul>
-    </nav>
-</header>
+      </div>
+    </div>
+  </div>
+</div>

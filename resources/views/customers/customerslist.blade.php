@@ -61,6 +61,7 @@
                         </form><a href="/customers/{{ $customer->id }}/delete">
                     </td>
                   </tr>
+                  {{ $customers->links() }}
                   @endforeach
                 </tbody>
                 

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Customers\Customer;
+use App\Models\Customers\Customers;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreCustomerRequest;
 
@@ -11,8 +11,10 @@ class CustomersController extends Controller
 
     public function index()
     {
-        $customers = Customer::all();
-        return view('customers.customer_form',compact('customers'));
+        $customers = Customers::all();
+        //$customers = Customer::paginate(10);
+        return view('customers.allCustomers',compact('customers'));
+       // return view('customers.customer_form',compact('customers'));
     }
 
     /**
@@ -22,12 +24,13 @@ class CustomersController extends Controller
      */
     public function create()
     {
-        return view('customers.customerform');
+        //return view('customers.customerform');
+        return view('customers.customer_form');
     }
        
     public function store(StoreCustomerRequest $request)
     {
-        $customer = new Customer($request->all());
+        $customer = new Customers($request->all());
                     
         if(!$customer->save()){
            
@@ -40,7 +43,7 @@ class CustomersController extends Controller
     }
 
     
-    public function show(Customer $customer)
+    public function show(Customers $customer)
     {
         return view('customers.customershow', compact('customer'));
     }
@@ -53,7 +56,7 @@ class CustomersController extends Controller
      */
     public function edit($id)
     {
-        $customer = Customer::find($id);
+        $customer = Customers::find($id);
         return view('customers.customereditform',compact('customer'));
     }
 
@@ -100,7 +103,7 @@ class CustomersController extends Controller
      */
     public function destroy($id)
     {
-        Customer::destroy($id);
+        Customers::destroy($id);
         session()->flash('message','Customer Deleted Succcessfully');
         return redirect('/customers');
     }

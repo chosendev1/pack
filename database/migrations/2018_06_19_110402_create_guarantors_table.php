@@ -15,7 +15,7 @@ class CreateGuarantorsTable extends Migration
     {
         Schema::create('guarantors', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('customer_id')->unsigned();
+            $table->integer('customers_id')->unsigned();
             $table->string('name_of_guarantor');
             $table->string('relationship_to_applicant');
             $table->string('religion');
@@ -28,8 +28,8 @@ class CreateGuarantorsTable extends Migration
             $table->string('marital_status');
             $table->softDeletes();
             $table->timestamps();
-            $table->foreign('customer_id')->references('id')->on('customers')
-                ->onDelete('cascade')->onUpdate('cascade');
+            //$table->foreign('customers_id')->references('id')->on('customers')
+              //  ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

@@ -11,6 +11,6 @@ class GuarantorsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Models\Customers\Guarantor::class, 50)->create();
+        factory(App\Models\Customers\Guarantors::class, 50)->create();
     }
 }

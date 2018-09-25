@@ -15,7 +15,7 @@ class CustomersTableSeeder extends Seeder
         	$u->posts()->save(factory(App\Post::class)->make());
     	});*/
 
-         factory(App\Models\Customers\Customer::class, 50)->create();
-        });
+         factory(App\Models\Customers\Customers::class, 50)->create();
+        
     }
 }

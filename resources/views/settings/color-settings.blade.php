@@ -1314,11 +1314,11 @@
     }
 
     .material-form .form-group .form-control.form-control-primary:focus ~ label:after {
-        background-color: PRIMARYCOLORVAL;
+        background-color: PRIMARYDARKER;
     }
 
     .material-form .form-group .form-control.form-control-primary:focus ~ label {
-        color: PRIMARYCOLORVAL;
+        color: PRIMARYDARKER;
     }
 
     .material-form .form-group .form-control.form-control-success:focus ~ label:after {
@@ -1362,11 +1362,11 @@
     }
 
     .material-form .form-group .form-control.form-control-light:focus ~ label:after {
-        background-color: LIGHTCOLORVAL;
+        background-color: PRIMARYDARKER;
     }
 
     .material-form .form-group .form-control.form-control-light:focus ~ label {
-        color: LIGHTCOLORVAL;
+        color: PRIMARYDARKER;
     }
 
     .material-form .form-group .form-control.form-control-dark:focus ~ label:after {
