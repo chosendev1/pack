@@ -14,7 +14,7 @@ class AddFrequencyToLoanProductsTable extends Migration
     public function up()
     {
         Schema::table('loan_products', function (Blueprint $table) {
-            $table->tinyInteger('payment_frequency')->after('interest_rate')->default(0);
+            $table->string('payment_frequency')->after('interest_rate')->default(0);
         });
     }
 
@@ -23,10 +23,10 @@ class AddFrequencyToLoanProductsTable extends Migration
      *
      * @return void
      */
-    /*public function down()
+    public function down()
     {
         Schema::table('loan_products', function (Blueprint $table) {
-            //
+            dropColumn('payment_frequency');
         });
-    }*/
+    }
 }

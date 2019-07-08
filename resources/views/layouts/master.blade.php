@@ -20,12 +20,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
     <!-- Dashboard Core -->
-    <link href="/css/dashboard.css" rel="stylesheet" />
+    <link href="/assets/css/dashboard.css" rel="stylesheet" />
     
     <!-- c3.js Charts Plugin -->
-    <link href="/plugins/charts-c3/plugin.css" rel="stylesheet" />
+    <link href="/assets/plugins/charts-c3/plugin.css" rel="stylesheet" />
     <!-- Google Maps Plugin -->
-    <link href="/plugins/maps-google/plugin.css" rel="stylesheet" />
+    <link href="/assets/plugins/maps-google/plugin.css" rel="stylesheet" />
 
 </head>
   <body class="">
@@ -43,17 +43,17 @@
   </body>
 </html>
     <!-- site foot -->
-<script src="/js/require.min.js"></script>
+<script src="/assets/js/require.min.js"></script>
     <script>
       requirejs.config({
           baseUrl: '.'
       });
 </script>
-<script src="/js/dashboard.js"></script>
-<script src="/plugins/charts-c3/plugin.js"></script>
-<script src="/plugins/maps-google/plugin.js"></script>
+<script src="/assets/js/dashboard.js"></script>
+<script src="/assets/plugins/charts-c3/plugin.js"></script>
+<script src="/assets/plugins/maps-google/plugin.js"></script>
     <!-- Input Mask Plugin -->
-<script src="/plugins/input-mask/plugin.js"></script>
+<script src="/assets/plugins/input-mask/plugin.js"></script>
 {{--<script src="/js/vendors/selectize.min.js"></script>
 <script src="/js/vendors/bootstrap.bundle.min.js"></script>
 <script src="/js/vendors/chart.bundle.min.js"></script>

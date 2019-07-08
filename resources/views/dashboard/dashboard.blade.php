@@ -85,7 +85,7 @@
               <div class="col-lg-6">
                 <div class="card">
                   <div class="card-header">
-                    <h3 class="card-title">Development Activity</h3>
+                    <h3 class="card-title">Borrowing trends/by month/or payments graph</h3>
                   </div>
                   <div id="chart-development-activity" style="height: 10rem"></div>
                   <div class="table-responsive">
@@ -214,7 +214,7 @@
                   <div class="col-sm-6">
                     <div class="card">
                       <div class="card-header">
-                        <h3 class="card-title">Chart title</h3>
+                        <h3 class="card-title">Loans By Gender</h3>
                       </div>
                       <div class="card-body">
                         <div id="chart-donut" style="height: 12rem;"></div>
@@ -259,7 +259,7 @@
                   <div class="col-sm-6">
                     <div class="card">
                       <div class="card-header">
-                        <h3 class="card-title">Chart title</h3>
+                        <h3 class="card-title">Performance by loan product</h3>
                       </div>
                       <div class="card-body">
                         <div id="chart-pie" style="height: 12rem;"></div>

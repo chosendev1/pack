@@ -15,6 +15,14 @@
                     <a href="customers/register" class="nav-link">
                       <i class="fe fe-plus"></i>Add New</a>
                 </div>
+                <div class="card-body">
+                  <div class="col-md-12">
+                        @if ($flash=session('message'))
+                            <div class="alert alert-success" role="alert">
+                                {{ $flash }}
+                            </div>
+                        @endif 
+                  </div>
                   <div class="table-responsive">
                     <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
                       {{-- <thead>
@@ -42,7 +50,7 @@
                                 {{ $customer->name_of_applicant }}</a>
                             </div>
                             <div class="small text-muted">
-                              {{ $customer->association_id_number }}
+                              {{ $customer->member_number }}
                             </div>
                           </td>
                           <td class="text-center">
@@ -65,15 +73,18 @@
                             {{-- <div class="mx-auto chart-circle chart-circle-xs" data-value="0.42" data-thickness="3" data-color="blue"> --}}
                               <div class="small text-muted">Loans</div>
                               <div>2</div>
-                            </div>
                           </td>
                           <td>
                             <div class="col-6 col-md-3">
                               <ul class="list-unstyled mb-0">
                                 <li><div class="small text-muted"><u>Links</u></div></li>
-                                <li><small><a href="/guarantors/register" class="text-inherit">Guarantors</a>
+                                <li><small><a href="/guarantors/{{ $customer->id }}/register" class="text-inherit">Guarantors</a>
                                 </small></li>
-                                <li><small><a href="/loans" class="text-inherit">Loans</a>
+                                <li><small>
+                                      <a href="/loan-applications/{{ $customer->id }}/apply" 
+                                        class="text-inherit">
+                                        Apply for Loan
+                                      </a>
                                 </small></li>
                                 <li><small><a href="customers/{{ $customer->id }}" class="text-inherit">Profile</a>
                                 </small></li>
@@ -98,7 +109,6 @@
                     </table>
                   </div>
                 </div>
+                </div>
               </div>
-              
      @endsection
-    

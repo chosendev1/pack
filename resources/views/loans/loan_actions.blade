@@ -1,0 +1,10 @@
+@include('loans.actions.approval')
+@include('loans.actions.disapproval') 
+@include('loans.actions.reject') 
+@include('loans.actions.collateral') 
+@include('loans.actions.schedule') 
+@include('loans.actions.disburse')
+@include('loans.actions.reverse') 
+@include('loans.actions.payment') 
+@include('loans.actions.approval') 
+{{-- @include('loans.actions.edit')  --}}

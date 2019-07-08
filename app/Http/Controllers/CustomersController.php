@@ -4,14 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Customers\Customers;
 use Illuminate\Http\Request;
-use App\Http\Requests\StoreCustomerRequest;
+use App\Http\Requests\storeImportedCustomerRequest;
+use Excel;
 
 class CustomersController extends Controller
 {
 
     public function index()
     {
-        $customers = Customers::all();
+        $customers = Customers::orderBy('id', 'DESC')->get();
         //$customers = Customer::paginate(10);
         return view('customers.allCustomers',compact('customers'));
        // return view('customers.customer_form',compact('customers'));
@@ -26,6 +27,11 @@ class CustomersController extends Controller
     {
         //return view('customers.customerform');
         return view('customers.customer_form');
+    }
+
+    public function importCustomersForm()
+    {
+        return view('customers.customers_importation_form');
     }
        
     public function store(StoreCustomerRequest $request)
@@ -106,5 +112,31 @@ class CustomersController extends Controller
         Customers::destroy($id);
         session()->flash('message','Customer Deleted Succcessfully');
         return redirect('/customers');
+    }
+
+    public function import(storeImportedCustomerRequest $request)
+    {
+        //$customer = new Customers($request->all());
+        $request->customer_import_file->store('uploads/customers');
+        if($request->hasFile('customer_import_file')){
+            $path = $request->file('customer_import_file')->getRealPath();
+            $data = Excel::load($path, function($reader) {
+            })->get();
+
+            if(!empty($data) && $data->count())
+            {
+                $data = $data->toArray();
+                for($i=0;$i<count($data);$i++)
+                { 
+                  $customer = new Customers($data[$i]);
+                    if(!$customer->save()){
+                        session()->flash('message','Customers NOT Registered');
+                        return redirect()->back();
+                    }
+                }
+                session()->flash('message','Customers Registered Succcessfully');
+                return redirect('/customers/importation');
+          }
+        }
     }
 }

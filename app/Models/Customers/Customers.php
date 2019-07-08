@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Loans\LoanApplications;
 
-
 class Customers extends Model
 {
 	use SoftDeletes;
@@ -18,5 +17,6 @@ class Customers extends Model
     {   
    		return $this->hasMany(LoanApplications::class);
     }
+
 }
 

@@ -4,6 +4,12 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Models\Customers\Customers::class, function (Faker $faker) {
     return [
+    	'company_id'     => function () {
+            return factory(App\Models\Companies\Company::class)->create()->id;
+        },
+        'branch_id'     => function () {
+            return factory(App\Models\Branches\Branch::class)->create()->id;
+        },
 	    'name_of_applicant' => $faker->name,
 	    'fathers_name' => $faker->name,
 	    'mothers_name' => $faker->name,
@@ -21,5 +27,7 @@ $factory->define(App\Models\Customers\Customers::class, function (Faker $faker) 
 	    'motor_cycle_no_plate' => $faker->unique()->randomNumber(6),
 	    'closet_land_mark' => $faker->streetName,
 	    'other_sources_of_income' => $faker->word(10),
+	    'email_address' =>$faker->email,
+	    'gross_weekly_income' =>$faker->word(5),
     ];
 });

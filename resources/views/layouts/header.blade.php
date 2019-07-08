@@ -80,60 +80,77 @@
 <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-3 ml-auto">
-        <form class="input-icon my-3 my-lg-0">
-          <input type="search" class="form-control header-search" placeholder="Search&hellip;" tabindex="1">
-          <div class="input-icon-addon">
-            <i class="fe fe-search"></i>
-          </div>
-        </form>
-      </div>
+     
       <div class="col-lg order-lg-first">
         <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" data-toggle="dropdown">
+              <i class="fe fe-settings"></i>
+              Settings
+            </a>
+            <div class="dropdown-menu dropdown-menu-arrow">
+              <a href="#" class="dropdown-item ">Institution</a>
+              <a href="#" class="dropdown-item ">Branch</a>
+              <a href="/loan-products" class="dropdown-item ">Loan Products</a>
+              <a href="/customers/importation" class="dropdown-item ">Import Customers</a>
+              <a href="/customers/importation" class="dropdown-item ">Import Loans</a>
+              <a href="/payments/importation" class="dropdown-item ">Import Loan Payments</a>
+            </div>
+          </li>
           <li class="nav-item">
             <a href="/dashboard" class="nav-link"><i class="fe fe-home"></i>Dashboard</a>
           </li>
           <li class="nav-item">
-            <a href="/loan-products" class="nav-link" data-toggle="dropdown"><i class="fe fe-box"></i>Loan Products</a>
-            <!-- <div class="dropdown-menu dropdown-menu-arrow">
-              <a href="./cards.html" class="dropdown-item ">Cards design</a>
-              <a href="./charts.html" class="dropdown-item ">Charts</a>
-              <a href="./pricing-cards.html" class="dropdown-item ">Pricing cards</a>
-            </div> -->
-          </li>
-          <li class="nav-item dropdown">
-            <a href="/customers" class="nav-link" data-toggle="dropdown"><i class="fe fe-calendar"></i> Customers</a>
-            <!-- <div class="dropdown-menu dropdown-menu-arrow">
-              <a href="./maps.html" class="dropdown-item ">Maps</a>
-              <a href="./icons.html" class="dropdown-item ">Icons</a>
-              <a href="./store.html" class="dropdown-item ">Store</a>
-              <a href="./blog.html" class="dropdown-item ">Blog</a>
-              <a href="./carousel.html" class="dropdown-item ">Carousel</a>
-            </div> -->
-          </li>
-          <li class="nav-item dropdown">
-            <a href="/loan-applications" class="nav-link active" data-toggle="dropdown"><i class="fe fe-file"></i>Loans</a>
-            <!-- <div class="dropdown-menu dropdown-menu-arrow">
-              <a href="./profile.html" class="dropdown-item ">Profile</a>
-              <a href="./login.html" class="dropdown-item ">Login</a>
-              <a href="./register.html" class="dropdown-item ">Register</a>
-              <a href="./forgot-password.html" class="dropdown-item ">Forgot password</a>
-              <a href="./400.html" class="dropdown-item ">400 error</a>
-              <a href="./401.html" class="dropdown-item ">401 error</a>
-              <a href="./403.html" class="dropdown-item ">403 error</a>
-              <a href="./404.html" class="dropdown-item ">404 error</a>
-              <a href="./500.html" class="dropdown-item ">500 error</a>
-              <a href="./503.html" class="dropdown-item ">503 error</a>
-              <a href="./email.html" class="dropdown-item ">Email</a>
-              <a href="./empty.html" class="dropdown-item active">Empty page</a>
-              <a href="./rtl.html" class="dropdown-item ">RTL mode</a>
-            </div> -->
-          </li>
-          <li class="nav-item dropdown">
-            <a href="/payments" class="nav-link"><i class="fe fe-check-square"></i>Payments</a>
+            <a href="/customers" class="nav-link"><i class="fe fe-calendar"></i> Customers</a>
           </li>
           <li class="nav-item">
-            <a href="/reports" class="nav-link"><i class="fe fe-file-text"></i>Reports</a>
+            <a href="/loan-applications" class="nav-link">
+              <i class="fe fe-file"></i>Loans
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" data-toggle="dropdown">
+              <i class="fe fe-file-text"></i>
+              Customer Reports
+            </a>
+            <div class="dropdown-menu dropdown-menu-arrow">
+              <a href="/customers" class="dropdown-item ">Customers</a>
+              <a href="/guarantors" class="dropdown-item ">Guarantors</a>
+              <a href="/collaterals" class="dropdown-item ">Collaterals</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" data-toggle="dropdown">
+              <i class="fe fe-file-text"></i>
+              Loan Reports
+            </a>
+            <div class="dropdown-menu dropdown-menu-arrow">
+              <a href="#" class="dropdown-item ">Application</a>
+              <a href="#" class="dropdown-item ">Approval</a>
+              <a href="#" class="dropdown-item ">Disbursement</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" data-toggle="dropdown">
+              <i class="fe fe-file-text"></i>
+              Payment Reports
+            </a>
+            <div class="dropdown-menu dropdown-menu-arrow">
+              <a href="#" class="dropdown-item ">All Payments</a>
+              <a href="#" class="dropdown-item ">Due Payments</a>
+              <a href="#" class="dropdown-item ">Outstanding Payments</a>
+              <a href="#" class="dropdown-item ">Arrears</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" data-toggle="dropdown">
+              <i class="fe fe-bar-chart-2"></i>
+              Performance Reports
+            </a>
+            <div class="dropdown-menu dropdown-menu-arrow">
+              <a href="#" class="dropdown-item ">Ageing Report</a>
+              <a href="#" class="dropdown-item ">Portifolio At Risk</a>
+            </div>
           </li>
         </ul>
       </div>

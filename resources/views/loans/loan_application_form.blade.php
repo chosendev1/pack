@@ -43,7 +43,7 @@
                 </div>             
                 <div class="col-md-6">
                   <div class="form-group">
-                  <label for="mothers_name">Loan Period</label>
+                  <label for="mothers_name">Loan Period In {frequency}</label>
                   <input type="text" class="form-control" name="loan_period" required>
                   </div>
                   <div class="form-group">

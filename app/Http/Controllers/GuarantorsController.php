@@ -2,26 +2,34 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Customers\Guarantor;
+use App\Models\Customers\Guarantors;
+use App\Models\Loans\LoanApplications;
+use App\Http\Requests\StoreGuarantorRequest;
+
 
 class GuarantorsController extends Controller
 {
     
     public function index()
     {
-        $guarantors = Guarantor::all();
+        $guarantors = Guarantors::with('loan_application');
         return view('guarantors.allGuarantors',compact('guarantors'));
     }
 
-    public function create()
-    {
-        return view('guarantors.guarantor_form_new');
+    public function create(LoanApplications $loan)
+    {   
+        $customer     = $loan->customers()->get();
+        $loan_product = $loan->loan_products()->get();
+        $guarantors   = $loan->guarantors()->get();
+
+        return view('guarantors.guarantors_form',compact([
+            'loan','customer','loan_product','guarantors'
+            ]));
     }
 
     public function store(StoreGuarantorRequest $request)
     {
-        $guarantor = new Guarantor($request->all());
+        $guarantor = new Guarantors($request->all());
                     
         if(!$guarantor->save()){
            
@@ -30,18 +38,18 @@ class GuarantorsController extends Controller
         }
         
         session()->flash('message','Guarantor Registered Succcessfully');
-        return redirect('/guarantors');
+         return redirect()->back();
     }
 
 
-    public function show(Guarantor $guarantor)
+    public function show(Guarantors $guarantor)
     {
         return view('guarantors.guarantorshow', compact('guarantor'));
     }
 
     public function edit($id)
     {
-        $customer = Guarantor::find($id);
+        $customer = Guarantors::find($id);
         return view('guarantors.guarantoreditform',compact('guarantor'));
     }
 

@@ -1,6 +1,6 @@
 <?php 
 
-namespace APP\Models\Payments
+namespace APP\Models\Payments;
 
 
 interface PaymentInterface

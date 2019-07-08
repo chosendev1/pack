@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Loans\LoanApplications;
 use App\Models\Loans\LoanProducts;
 use App\Models\Loans\Schedule;
-use App\Models\Loans\Customers;
+use App\Models\Customers\Customers;
 use Illuminate\Loans\Http\Request;
 use App\Http\Requests\StoreLoanApplicationRequest;
 use Carbon\Carbon;
@@ -27,7 +27,11 @@ class LoansApplicationController extends Controller
 
      public function index()
     {
-        $loan_applications = LoanApplications::all();
+        //$loan_applications = LoanApplications::all();
+        $loan_applications = LoanApplications::with('loan_products')
+            ->with('customers')
+            ->orderBy('id', 'DESC')
+            ->get();
             
         return view('loans.allLoanapplications',compact('loan_applications'));
         //return view('loans.loan_application_form');
@@ -38,11 +42,11 @@ class LoansApplicationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Customers $customerId)
     {   
         $loan_products = LoanProducts::all();
-        $customers    = Customers::all();
-        return view('loans.loan_application_form',compact(['loan_products','customers']));
+        $customer    = $customerId;
+        return view('loans.loan_form',compact(['loan_products','customer']));
         //_allLoanApplications();
     }
 
@@ -57,12 +61,26 @@ class LoansApplicationController extends Controller
         $loan_application = new LoanApplications($request->all());
         
         if(!$loan_application->save()){
-            
-            session()->flash('message','Loan Application NOT Registered');
-            return redirect('/loan-applications/create');
+      
+            session()->flash('message','Loan application Failed');
+            return redirect('/loan-applications');
         }
-        session()->flash('message','Loan Application Succcessful');
-        return redirect('/loan-applications/create');
+        session()->flash('message','Loan application was succcessful');
+        return redirect('/loan-applications');
+    }
+
+    //loan schedule
+
+    public function schedule(LoanApplications $loan, LoanProducts $product)
+    {   
+        $schedule = new Schedule($loan,$product);
+        //$interest_method = $product->interest_method;
+        $schedule = $schedule->schedule();
+        return view('loans.payment_schedule',compact('schedule'));
+       
+        /*session()->flash('message','Loan Disbursed Succcessfully');
+        return redirect('/loan-applications');*/
+        //printf("Right now is %s", Carbon::now()->setTimezone('Africa/Kampala'));
     }
 
     /**
@@ -112,10 +130,9 @@ class LoansApplicationController extends Controller
 
     public function loan_approval($id)
     {
-        $loan=LoanApplicatiosn::find($id);
+        $loan=LoanApplications::find($id);
         $loan->approved=1;
-         if(!$loan->save()){
-            
+         if(!$loan->save()){  
             session()->flash('message','Loan Application NOT Approved');
             return redirect('/loan-applications');
         }

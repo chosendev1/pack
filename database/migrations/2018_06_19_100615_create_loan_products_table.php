@@ -15,6 +15,8 @@ class CreateLoanProductsTable extends Migration
     {
         Schema::create('loan_products', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('company_id')->unsigned();
+            $table->integer('branch_id')->unsigned();
             $table->string('product_name');
             $table->string('interest_method');
             $table->decimal('interest_rate', 3, 2);
@@ -23,6 +25,10 @@ class CreateLoanProductsTable extends Migration
             $table->softDeletes();
             
             $table->timestamps();
+            $table->foreign('company_id')->references('id')->on('companies')
+                ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('branch_id')->references('id')->on('branches')
+                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

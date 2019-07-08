@@ -16,4 +16,12 @@ class LoanProducts extends Model
     {   
    		return $this->hasMany(LoanApplications::class);
     }
+
+    /*public function getInterestMethod()
+    {  
+
+    	//return $this->product_name;
+    	$p=new LoanProducts;
+    	return $p->pluck('product_name');
+    }*/
 }

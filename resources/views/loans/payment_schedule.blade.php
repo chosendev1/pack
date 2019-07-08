@@ -1,43 +1,44 @@
-
     @extends('layouts.master')
-      
         @section ('content')
-        @include('layouts.errors')   
-            <div class="container-fluid">
-                <div class="row">                                                     
-                    <div class="col-12 col-xl-12 m-b-10">
-                            <div class="bg-white padding-25 white-box h-100">
-                                <h4 class="mt-0 box-title">Bordered table</h4>
-                                <p class="text-muted m-b-20 box-content">
-                                    Add the class <code>table-bordered</code> for borders on all sides of the table and cells
-                                </p>
-                                <div class="table-bordered">
-                                    <table class="table table-bordered">
-                                        <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Date</th>
-                                            <th>Principal</th>
-                                            <th>Interest</th>
-                                            <th>Installment</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                           
-                                        @foreach($schedule as $installment)
-                                        <tr>
-                                        <th scope="row">{{ $installment['installment_number'] }}</th>
-                                            <td>{{ $installment['payment_date'] }}</td>
-                                            <td>{{ $installment['principal'] }}</td>
-                                            <td>{{ $installment['interest'] }}</td>
-                                            <td>{{ $installment['installment'] }}</td>
-                                        </tr>
-                                        @endforeach
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+        @include('layouts.errors')      
+            <div class="col-12">
+                <div class="page-header">
+                    <h1 class="page-title">
+                    Loan Schedule
+                    </h1>
+                </div>
+
+                <div class="card">
+                  <div class="card-header">
+                    <a href="loan-applications/register" class="nav-link">
+                      <i class="fe fe-plus"></i>New Loan</a>
+                  </div>
+                <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Date</th>
+                                    <th>Principal</th>
+                                    <th>Interest</th>
+                                    <th>Installment</th>
+                                    <th>Balance</th>
+                                </tr>
+                            </thead>
+                            <tbody>                               
+                            @foreach($schedule as $installment)
+                            <tr>
+                            <th scope="row">{{ $installment['installment_number'] }}</th>
+                                <td>{{ $installment['due_date'] }}</td>
+                                <td>{{ $installment['principal'] }}</td>
+                                <td>{{ $installment['interest'] }}</td>
+                                <td>{{ $installment['installment'] }}</td>
+                                <td>{{ $installment['balance'] }}</td>
+                            </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>             
        @endsection

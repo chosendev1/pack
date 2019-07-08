@@ -15,8 +15,14 @@ class CreateCashAccountsTable extends Migration
     {
         Schema::create('cash_accounts', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('company_id')->unsigned();
+            $table->integer('branch_id')->unsigned();
             $table->softDeletes();
             $table->timestamps();
+            $table->foreign('company_id')->references('id')->on('companies')
+                ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('branch_id')->references('id')->on('branches')
+                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

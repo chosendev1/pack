@@ -40,10 +40,10 @@ class LoanProductsController extends Controller
     
         if(!$product->save()){
             session()->flash('message','Loan Product NOT Registered');
-            return redirect('/loan-products/create');
+            return redirect('/loan-products');
         }
         session()->flash('message','Loan Product Registered Succcessfully');
-        return redirect('/loan-products/create');
+        return redirect('/loan-products');
     }
 
     /**
